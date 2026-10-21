@@ -30,12 +30,93 @@ h2{font-family:"Inter Display","Inter",sans-serif;font-weight:900;font-size:96px
 .comment{display:flex;gap:30px;align-items:center;background:rgba(255,255,255,.06);border-radius:30px;padding:34px 40px;border-left:10px solid var(--violet2)}
 .comment p{font-size:40px;line-height:1.3}
 .avatar{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--yellow));flex:none}
+
+/* ---- tuto visuel ---- */
+.step{display:flex;align-items:center;gap:22px;margin:46px 0 26px}
+.step .bignum{width:92px;height:92px;font-size:38px;border-radius:18px;flex:none}
+.bar{flex:1;height:10px;border-radius:9px;background:rgba(255,255,255,.08);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--yellow));border-radius:9px}
+.steplbl{font-family:"DejaVu Sans Mono",monospace;font-size:26px;color:var(--mute);letter-spacing:2px}
+h3{font-family:"Inter Display","Inter",sans-serif;font-weight:900;font-size:74px;line-height:1.04;letter-spacing:-2.5px;margin-bottom:34px}
+.cap{font-size:40px;line-height:1.36;color:#d9d3e8;margin-top:30px}
+.cap .chip{display:inline-block;font-size:32px;padding:12px 22px;border-radius:14px;margin-top:18px}
+.win{background:#16131f;border:2px solid rgba(192,132,252,.35);border-radius:26px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 0 8px rgba(139,92,246,.08)}
+.wbar{display:flex;align-items:center;gap:12px;padding:18px 24px;background:#1f1a2c;border-bottom:2px solid rgba(255,255,255,.06);font-family:"DejaVu Sans Mono",monospace;font-size:26px;color:var(--mute)}
+.wbar i{width:16px;height:16px;border-radius:50%;background:#3a3350}.wbar i:first-child{background:var(--violet2)}
+.wbar span{margin-left:12px}
+.wbody{padding:30px 32px;font-size:38px}
+.row{display:flex;align-items:center;gap:22px;padding:24px 22px;border-radius:14px;margin:6px 0;color:#cfc8e0}
+.row .k{flex:1}.row .v{font-family:"DejaVu Sans Mono",monospace;color:#8fb7ff;min-width:110px;text-align:right}
+.row.hl{background:rgba(139,92,246,.25);outline:3px solid var(--yellow);color:#fff}
+.row.hl .v{color:var(--yellow);font-weight:700}
+.row .sw{width:28px;height:28px;border-radius:6px;flex:none}
+.th{display:flex;gap:20px;padding:6px 22px 14px;font-family:"DejaVu Sans Mono",monospace;font-size:26px;color:var(--mute);border-bottom:2px solid rgba(255,255,255,.06)}
+.th .k{flex:1}
+.pill{font-family:"DejaVu Sans Mono",monospace;font-size:30px;padding:8px 18px;border-radius:10px;background:rgba(255,255,255,.07);min-width:150px;text-align:center}
+.row.hl .pill,.pill.hl{background:var(--yellow);color:#111;font-weight:700}
+.note{display:inline-block;margin-left:auto;background:var(--yellow);color:#111;font-weight:800;font-size:30px;padding:6px 14px;border-radius:10px;white-space:nowrap}
+.menus{display:flex;gap:16px;align-items:flex-start}
+.menu{background:#211c2e;border:2px solid rgba(255,255,255,.08);border-radius:16px;padding:10px;min-width:250px}
+.menu div{padding:16px 18px;border-radius:10px;font-size:32px;color:#cfc8e0;white-space:nowrap}
+.menu div.hl{background:var(--violet);color:#fff;font-weight:700}
+.menu div.hl.last{background:var(--yellow);color:#111}
+.menu .mh{font-family:"DejaVu Sans Mono",monospace;font-size:24px;color:var(--mute);padding:4px 16px 8px}
+.track{position:relative;height:170px;margin:10px 0 4px;background:rgba(255,255,255,.04);border-radius:14px}
+.track .lbl{position:absolute;left:18px;top:6px;font-family:"DejaVu Sans Mono",monospace;font-size:26px;color:var(--mute)}
+.dia{position:absolute;top:95px;width:36px;height:36px;background:var(--yellow);transform:translate(-50%,-50%) rotate(45deg);border-radius:4px;box-shadow:0 0 18px rgba(255,210,63,.6)}
+.wave{display:flex;align-items:center;gap:5px;height:200px;padding:0 6px}
+.wave i{flex:1;background:var(--violet2);opacity:.55;border-radius:3px}
+.wave i.b{opacity:1;background:var(--yellow)}
+.sl{margin:18px 0}.sl .t{display:flex;justify-content:space-between;font-size:32px;color:#cfc8e0;margin-bottom:12px}
+.sl .t b{font-family:"DejaVu Sans Mono",monospace;color:var(--yellow)}
+.sl .r{height:16px;border-radius:9px;background:rgba(255,255,255,.08);position:relative}
+.sl .r i{position:absolute;left:0;top:0;bottom:0;border-radius:9px;background:linear-gradient(90deg,var(--violet),var(--violet2))}
+.sl .r u{position:absolute;top:50%;width:36px;height:36px;border-radius:50%;background:#fff;transform:translate(-50%,-50%);box-shadow:0 0 0 6px rgba(192,132,252,.4)}
+.demo{position:relative;height:var(--h,430px);border-radius:20px;overflow:hidden;background:radial-gradient(500px 300px at 70% 30%,#3b2a66,#0b0913 70%)}
+.demo .w{position:absolute;inset:0;display:grid;place-items:center;font-family:"Inter Display","Inter",sans-serif;font-weight:900;font-size:var(--fs,190px);letter-spacing:-6px;color:#fff;mix-blend-mode:screen}
+.demo .r{color:#ff1f3d}.demo .g{color:#18ff6d}.demo .bl{color:#2b6bff}
+.demo .lab{position:absolute;left:20px;top:18px;font-family:"DejaVu Sans Mono",monospace;font-weight:700;font-size:24px;padding:6px 14px;border-radius:10px;background:rgba(0,0,0,.55);color:#fff;z-index:2}
+.demo .lab.y{background:var(--yellow);color:#111}
+.demo .scan{position:absolute;left:0;right:0;height:var(--sh,26px);top:var(--st,55%);background:rgba(255,255,255,.06);transform:translateX(var(--sx,30px));backdrop-filter:hue-rotate(90deg)}
+.ba{display:flex;flex-direction:column;gap:22px}
+.shot{position:relative;border-radius:20px;overflow:hidden;border:2px solid rgba(192,132,252,.35)}
+.shot img{display:block;width:100%}
+.mark{position:absolute;border:5px solid var(--yellow);border-radius:14px;box-shadow:0 0 0 9999px rgba(0,0,0,.0),0 0 30px rgba(255,210,63,.6)}
+.mark span{position:absolute;left:0;top:-52px;background:var(--yellow);color:#111;font-weight:800;font-size:26px;padding:6px 14px;border-radius:10px;white-space:nowrap}
 </style></head><body><div id="root"></div>
 <script>
 const P = window.POST;
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
 // *mot* = surlignage jaune, _mot_ = violet lumineux, \n = retour ligne
 const fx = s => esc(s).replace(/\*(.+?)\*/g,'<span class="hl">$1</span>').replace(/_(.+?)_/g,'<span class="glow">$1</span>').replace(/\n/g,'<br>');
+
+const win=(t,inner)=>`<div class="win"><div class="wbar"><i></i><i></i><i></i><span>${esc(t||"")}</span></div><div class="wbody">${inner}</div></div>`;
+const note=x=>x.note?`<span class="note">${esc(x.note)}</span>`:"";
+function demo(d){
+  const o=d.offset??0, t=esc(d.text||"EDIT"), lab=d.label?`<span class="lab${d.hl?" y":""}">${esc(d.label)}</span>`:"";
+  const st=`--h:${d.h||430}px;--fs:${d.fs||190}px`;
+  if(!o) return `<div class="demo" style="${st}">${lab}<div class="w">${t}</div></div>`;
+  const g=d.glitch?`<div class="scan"></div><div class="scan" style="--st:28%;--sh:14px;--sx:-40px"></div>`:"";
+  return `<div class="demo" style="${st}">${lab}<div class="w r" style="transform:translateX(${-o}px)">${t}</div><div class="w g">${t}</div><div class="w bl" style="transform:translateX(${o}px)">${t}</div>${g}</div>`;
+}
+function ui(u){
+  if(u.img){ // vraie capture d'écran : captures/<id>/xx.png, marks en % de l'image
+    const m=(u.marks||[]).map(k=>`<div class="mark" style="left:${k.x}%;top:${k.y}%;width:${k.w}%;height:${k.h}%">${k.label?`<span>${esc(k.label)}</span>`:""}</div>`).join("");
+    return `<div class="shot"><img src="${(P.base||"")+u.img}">${m}</div>`;
+  }
+  if(u.ui==="demo") return demo(u);
+  if(u.ui==="beforeafter") return `<div class="ba">${demo({...u,offset:0,label:"AVANT",h:u.h||330,fs:u.fs||150})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330,fs:u.fs||150})}</div>`;
+  if(u.ui==="timeline") return win(u.title||"Montage",`<div class="th"><span>#</span><span class="k">${esc(u.colName||"Nom des calques")}</span><span>${esc(u.colMode||"Mode")}</span></div>`+
+    u.rows.map((r,k)=>`<div class="row${r.hl?" hl":""}"><span class="sw" style="background:${r.color||"#8b5cf6"}"></span><span>${k+1}</span><span class="k">${esc(r.name)}</span>${note(r)}${r.mode?`<span class="pill${r.hlmode?" hl":""}">${esc(r.mode)}</span>`:""}</div>`).join(""));
+  if(u.ui==="effects") return win(u.title||"Effets",`<div class="row" style="color:#fff;font-weight:800"><span class="pill" style="min-width:0">fx</span><span class="k">${esc(u.effect)}</span></div>`+
+    u.params.map(r=>`<div class="row${r.hl?" hl":""}"><span class="k">${esc(r.k)}</span>${note(r)}<span class="v">${esc(r.v)}</span></div>`).join(""));
+  if(u.ui==="menu") return win(u.title||"Menu",`<div class="menus">${u.menus.map((m,k)=>`<div class="menu">${m.head?`<div class="mh">${esc(m.head)}</div>`:""}${m.items.map(it=>`<div class="${it===m.sel?"hl"+(k===u.menus.length-1?" last":""):""}">${esc(it)}${it===m.sel&&k<u.menus.length-1?"  ▸":""}</div>`).join("")}</div>`).join("")}</div>`);
+  if(u.ui==="dropdown") return win(u.title||"",`<div class="menu" style="border:none;background:none;padding:0">${u.items.map(it=>`<div class="${it===u.sel?"hl last":""}" style="display:flex">${esc(it)}${it===u.sel&&u.note?`<span class="note" style="background:#111;color:var(--yellow)">${esc(u.note)}</span>`:""}</div>`).join("")}</div>`);
+  if(u.ui==="keys"){const bars=Array.from({length:60},(_,k)=>{const b=(u.beats||[]).some(x=>Math.abs(x-k*100/60)<1.2);const h=b?100:15+((k*37)%45);return `<i class="${b?"b":""}" style="height:${h}%"></i>`}).join("");
+    return win(u.title||"Montage",`<div class="track"><span class="lbl">${esc(u.prop||"Position")}</span>${u.keys.map(x=>`<span class="dia" style="left:${x}%"></span>`).join("")}</div><div class="wave">${bars}</div>`);}
+  if(u.ui==="sliders") return win(u.title||"Effets",u.items.map(it=>`<div class="sl"><div class="t"><span>${esc(it.k)}</span><b>${esc(it.v)}</b></div><div class="r"><i style="width:${it.p}%"></i><u style="left:${it.p}%"></u></div></div>`).join(""));
+  return "";
+}
 const n = P.slides.length, H = P.handle || "@senkomp4";
 const html = P.slides.map((s,i)=>{
   const c = String(i+1).padStart(2,"0")+"/"+String(n).padStart(2,"0");
@@ -43,10 +124,13 @@ const html = P.slides.map((s,i)=>{
   const top = `<div class="top">${s.tag?`<span class="tag">${esc(s.tag)}</span>`:`<span>${esc(s.label||"")}</span>`}<span>${c}</span></div>`;
   const foot = `<div class="foot"><b>${H}</b>${last?`<span>SenkO | Outils créa & IA</span>`:`<span class="swipe">${i===0?"SWIPE →":"→"}</span>`}</div>`;
   let mid="";
-  if(s.type==="cover") mid=`<div class="mid"><h1${s.size?` style="font-size:${s.size}px"`:""}>${fx(s.title)}</h1>${s.sub?`<p class="sub">${fx(s.sub)}</p>`:""}</div>`;
+  if(s.type==="cover") mid=`<div class="mid"${s.visual?' style="gap:40px"':""}>${s.visual?ui(s.visual):""}<h1${s.size?` style="font-size:${s.size}px"`:""}>${fx(s.title)}</h1>${s.sub?`<p class="sub">${fx(s.sub)}</p>`:""}</div>`;
   else if(s.type==="point") mid=`<div class="mid"><div class="bignum">${esc(s.num||String(i).padStart(2,"0"))}</div><h2>${fx(s.title)}</h2>${s.body?`<p class="body">${fx(s.body)}</p>`:""}${s.chip?`<div class="chip">${esc(s.chip)}</div>`:""}</div>`;
   else if(s.type==="list") mid=`<h2 style="margin:50px 0 44px">${fx(s.title)}</h2><div class="list">${s.items.map((it,k)=>`<div class="card"><div class="num">${String(k+1).padStart(2,"0")}</div><div><b>${fx(it.t)}</b>${it.s?`<span>${fx(it.s)}</span>`:""}</div></div>`).join("")}</div>`;
-  else if(s.type==="cta") mid=`<div class="mid"><h2 style="font-size:120px;letter-spacing:-4px">${fx(s.title||"Enregistre\n_ce post._")}</h2><div class="cta">${esc(s.button||"Abonne-toi")}</div><div class="comment"><div class="avatar"></div><p>${fx(s.question)}</p></div></div>`;
+  else if(s.type==="tuto"){const tot=P.slides.filter(x=>x.type==="tuto").length,k=P.slides.slice(0,i+1).filter(x=>x.type==="tuto").length;
+    mid=`<div class="step"><div class="bignum">${String(k).padStart(2,"0")}</div><div class="bar"><i style="width:${k*100/tot}%"></i></div><span class="steplbl">ÉTAPE ${k}/${tot}</span></div><h3>${fx(s.title)}</h3>${ui(s.visual||{})}<p class="cap">${s.body?fx(s.body):""}${s.chip?`<br><span class="chip">${esc(s.chip)}</span>`:""}</p>`;}
+  else if(s.type==="visual") mid=`<h3 style="margin-top:50px">${fx(s.title)}</h3>${ui(s.visual||{})}${s.body?`<p class="cap">${fx(s.body)}</p>`:""}`;
+  else if(s.type==="cta") mid=`<div class="mid"><h2 style="font-size:120px;letter-spacing:-4px">${fx(s.title||"Enregistre\n_ce post._")}</h2>${s.visual?ui(s.visual):""}<div class="cta">${esc(s.button||"Abonne-toi")}</div><div class="comment"><div class="avatar"></div><p>${fx(s.question)}</p></div></div>`;
   return `<section class="s" id="s${i+1}">${top}${mid}${foot}</section>`;
 }).join("");
 document.getElementById("root").innerHTML = html;

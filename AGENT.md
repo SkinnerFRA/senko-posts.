@@ -14,7 +14,7 @@ Niche : effets tendance After Effects & Premiere Pro (tuto manuel en slides + sc
 
 ## Règles d'économie (obligatoires)
 - Pas de recherche web, pas de lecture de fichiers hors du dépôt, pas de capture d'écran pleine taille.
-- Vérification visuelle : uniquement `apercu.jpg` (planche réduite), une seule fois par post.
+- Vérification visuelle : uniquement `apercu.jpg` (planche réduite), une seule fois par post (vérifie qu'aucun texte ne déborde des maquettes).
 - Un seul rendu par post ; ne refais le rendu que si l'aperçu montre un texte qui déborde.
 - Pas de narration entre les étapes. Un seul message de fin.
 
@@ -30,7 +30,15 @@ Niche : effets tendance After Effects & Premiere Pro (tuto manuel en slides + sc
      {"type":"cta","title":"Enregistre\n_ce post._","button":"Abonne-toi","question":"Question pour les commentaires"}],
     "caption":"légende + 5 à 7 hashtags","tiktok_title":"titre court + emoji"}
    ```
-   - 5 à 8 slides : 1 `cover`, contenu (`point` ou `list`, max 4 items par `list`), 1 `cta` en dernier.
+   - 6 à 10 slides : 1 `cover`, contenu, 1 `cta` en dernier. **Ne recycle pas la même mise en page** : pour un tuto, chaque étape est un slide `tuto` qui MONTRE l'action dans une capture.
+   - Types de slides visuels (même DA) :
+     - `{"type":"tuto","title":"...","visual":{...},"body":"1 phrase","chip":"raccourci"}` → barre « ÉTAPE x/n » automatique.
+     - `{"type":"visual","title":"...","visual":{...},"body":"..."}` (ex. avant/après).
+     - `cover` et `cta` acceptent aussi un `visual`.
+   - `visual` possibles :
+     - **Vraie capture** (prioritaire) : `{"img":"captures/<id>/01.png","marks":[{"x":10,"y":20,"w":30,"h":8,"label":"Ici"}]}` (cadres jaunes en % de l'image). Si Alexis a déposé des captures dans `captures/<id>/`, utilise-les.
+     - Sinon, maquettes d'interface : `timeline` (rows: name, color, mode, hl, hlmode, note), `effects` (effect, params: k, v, hl, note), `menu` (menus: head, items, sel), `dropdown` (items, sel, note), `keys` (prop, keys %, beats %), `sliders` (items: k, v, p %), `demo` (text, offset, glitch), `beforeafter` (text, offset, glitch).
+   - Exemple complet : `ready/ae-rgb-split.json`.
    - `*mot*` = surlignage jaune, `_mot_` = violet, `\n` = retour à la ligne. Titres de couverture : max ~11 caractères par ligne.
    - **Posts « effet »** : cover accrocheuse, 4-6 slides de tuto manuel, CTA final « Le script fait tout en 1 clic » + bouton « Lien dans ma bio ». Pour un effet After Effects, écris aussi `scripts/SenkO_<Effet>.jsx` (ExtendScript, un seul groupe d'annulation, contrôles par curseurs sur un calque nul, alertes en français) et mentionne le script dans la légende.
    - **Exactitude** : raccourcis pour Windows, en français (Maj, Origine…). N'écris que ce dont tu es sûr ; dans le doute, reformule sans le détail incertain.

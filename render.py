@@ -11,6 +11,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 post = json.load(open(post_path, encoding="utf-8"))
 os.makedirs(out, exist_ok=True)
 html = open(os.path.join(here, "template.html"), encoding="utf-8").read()
+post.setdefault("base", "file://" + here + "/")  # pour les vraies captures : captures/<id>/...
 html = html.replace("<script>", "<script>window.POST=" + json.dumps(post, ensure_ascii=False) + ";", 1)
 tmp = os.path.join(out, "_page.html")
 open(tmp, "w", encoding="utf-8").write(html)
