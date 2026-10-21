@@ -1,0 +1,14 @@
+[
+  {"id": "ae-raccourcis", "statut": "a_faire", "pret": "ready/ae-raccourcis.json", "sujet": "5 raccourcis After Effects qui changent tout"},
+  {"id": "pr-raccourcis", "statut": "a_faire", "sujet": "5 raccourcis Premiere Pro pour monter 2x plus vite (Windows)"},
+  {"id": "sites-sons", "statut": "a_faire", "sujet": "5 sites gratuits pour trouver des sons et bruitages (Freesound, Pixabay Sound, Mixkit, Zapsplat, bundle Sonniss GDC) — préciser de vérifier la licence"},
+  {"id": "ae-expressions", "statut": "a_faire", "sujet": "3 expressions After Effects à connaître : wiggle(), loopOut(), time — à quoi elles servent, exemple simple"},
+  {"id": "pr-sous-titres", "statut": "a_faire", "sujet": "Sous-titres automatiques dans Premiere Pro : transcrire puis créer les légendes, en 4 étapes"},
+  {"id": "ae-graph-editor", "statut": "a_faire", "sujet": "Comprendre le Graph Editor d'After Effects : graphe de vitesse vs graphe de valeur, quand utiliser lequel"},
+  {"id": "sites-polices", "statut": "a_faire", "sujet": "5 sources de polices gratuites pour créatifs (Google Fonts, Fontshare, etc.) — rappeler de vérifier l'usage commercial"},
+  {"id": "pr-imbrication", "statut": "a_faire", "sujet": "Premiere Pro : imbrication (nest) vs calque d'effets — différence et cas d'usage"},
+  {"id": "ae-precomp", "statut": "a_faire", "sujet": "After Effects : les 2 options de précomposition expliquées simplement"},
+  {"id": "erreurs-motion", "statut": "a_faire", "sujet": "5 erreurs de débutant en motion design (pas d'easing, trop d'effets, timing, typo illisible, export raté)"},
+  {"id": "export-reseaux", "statut": "a_faire", "sujet": "Mes réglages d'export pour Reels/TikTok depuis Premiere : 1080x1920, 60 i/s, H.264, débit — format vertical"},
+  {"id": "ae-texte-anime", "statut": "a_faire", "sujet": "3 façons rapides d'animer un texte dans After Effects (animateurs de texte, presets, masque de révélation)"}
+]

@@ -1,0 +1,14 @@
+{
+  "id": "ae-raccourcis",
+  "slides": [
+    {"type": "cover", "tag": "AFTER EFFECTS", "title": "5 raccourcis\nqui changent\n*tout.*", "sub": "Le n°3 va te faire gagner des heures."},
+    {"type": "point", "num": "01", "title": "Voir _uniquement_ ce qui est animé", "body": "U affiche les propriétés qui ont des images clés. UU affiche tout ce que tu as modifié.", "chip": "U  /  UU"},
+    {"type": "point", "num": "02", "title": "Couper un calque _en deux_", "body": "Place la tête de lecture, et le calque se divise net à cet endroit.", "chip": "Ctrl + Maj + D"},
+    {"type": "point", "num": "03", "title": "Raccourcir un calque _sans viser_", "body": "Coupe le début ou la fin du calque pile sur la tête de lecture.", "chip": "Alt + [   /   Alt + ]"},
+    {"type": "point", "num": "04", "title": "Des mouvements _plus fluides_", "body": "Sélectionne tes images clés et applique un lissage d'un coup.", "chip": "F9  (Easy Ease)"},
+    {"type": "point", "num": "05", "title": "Recentrer le _point d'ancrage_", "body": "Le point d'ancrage revient au centre du contenu du calque.", "chip": "Ctrl + Alt + Origine"},
+    {"type": "cta", "title": "Enregistre\n_ce post._", "button": "Abonne-toi", "question": "Ton raccourci préféré ? Dis-le en commentaire"}
+  ],
+  "caption": "5 raccourcis After Effects qui changent tout ⚡\n\nEnregistre ce post pour l'avoir sous la main 📌\n\n#aftereffects #motiondesign #raccourcis #astucesaftereffects #monteurvideo #creatifs",
+  "tiktok_title": "5 raccourcis After Effects ⚡"
+}
