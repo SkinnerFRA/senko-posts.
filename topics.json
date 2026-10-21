@@ -12,6 +12,12 @@
   "sujet": "Titre chrome années 80 dans After Effects (tuto pas à pas)"
  },
  {
+  "id": "ae-inflate",
+  "statut": "fait",
+  "pret": "ready/ae-inflate.json",
+  "sujet": "Effet « Inflate » viral (IA) refait à la main dans After Effects (tuto pas à pas)"
+ },
+ {
   "id": "ae-zoom-impact",
   "statut": "a_faire",
   "sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto pas à pas)"
