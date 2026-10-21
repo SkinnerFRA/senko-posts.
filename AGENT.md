@@ -20,7 +20,7 @@ Niche : effets tendance After Effects & Premiere Pro (tuto manuel en slides + sc
 
 ## Étapes
 1. **Préparer** : rattache le dépôt (outil add_repo, owner `SkinnerFRA`, repo `senko-posts.`, access `push`), clone-le avec `git clone --depth 1 https://github.com/SkinnerFRA/senko-posts. /home/claude/senko-posts.`, puis travaille dedans.
-2. **Choisir** les 2 premiers sujets `"statut": "a_faire"` de topics.json. S'il en reste moins de 2 : traite ce qu'il y a et signale-le (« liste de sujets à remplir »). S'il n'y en a aucun : ne publie rien, préviens simplement.
+2. **Choisir** (après avoir lu `idees.md` : styles aimés, idées refusées) les 2 premiers sujets `"statut": "a_faire"` de topics.json. S'il en reste moins de 2 : traite ce qu'il y a et signale-le (« liste de sujets à remplir »). S'il n'y en a aucun : ne publie rien, préviens simplement.
 3. **Écrire** chaque post en JSON (sauf si `pret` pointe vers un fichier : utilise-le tel quel). Format :
    ```json
    {"id":"...","slides":[
@@ -44,7 +44,7 @@ Niche : effets tendance After Effects & Premiere Pro (tuto manuel en slides + sc
    - **Exactitude** : raccourcis pour Windows, en français (Maj, Origine…). N'écris que ce dont tu es sûr ; dans le doute, reformule sans le détail incertain.
 4. **Rendre** : `python3 render.py post.json /tmp/rendu/<id>` → JPG + apercu.jpg (hors du dépôt). Regarde l'aperçu.
 5. **Héberger** : copie les JPG des 2 posts dans `tmp/` du dépôt, commit, `git push origin main`.
-6. **Programmer dans Metricool**, pour chaque post : providers instagram+facebook+tiktok, `media` = les URL raw de ses JPG dans l'ordre, `text` = caption, `autoPublish: false` (Alexis valide via la notification Metricool), `draft: false`, `instagramData.type: "POST"`, `facebookData.type: "POST"`, `tiktokData.title` = tiktok_title, `tiktokData.autoAddMusic: true`, date = mardi ou jeudi 10:00. Vérifie dans la réponse que `media` pointe vers `static.metricool.com` (= images copiées).
+6. **Programmer dans Metricool**, pour chaque post : providers instagram+facebook+tiktok, `media` = les URL raw de ses JPG dans l'ordre, `text` = caption, `autoPublish: false` (Alexis valide via la notification Metricool), `draft: false`, `instagramData.type: "POST"`, `facebookData.type: "POST"`, `tiktokData.title` = tiktok_title, `tiktokData.autoAddMusic: true`, date = mardi ou jeudi 10:00. **Avant de créer**, vérifie avec getScheduledPosts que le créneau est libre : s'il est déjà pris (post préparé à la main), ne programme rien dessus et garde le sujet en `a_faire`. Vérifie dans la réponse que `media` pointe vers `static.metricool.com` (= images copiées).
 7. **Nettoyer** : supprime `tmp/` du dépôt (git rm), commit, push. Metricool a déjà ses copies.
 8. **Script de Reel** (1 par semaine) : sur le sujet du jeudi ou une variante. Écris `reels/AAAA-MM-JJ.md` (date du lundi) : accroche visuelle choc (3 s, montrer le résultat d'abord), script parlé 30-45 s rythmé et complice, moment « wow » du script en 1 clic, plans à tourner, textes à l'écran avec emojis, légende avec appel « lien en bio ». Aguicheur, court et concret.
 9. **Mettre à jour** topics.json (sujets passés en `"statut":"fait"`) et journal.md (une ligne par post : date, id, réseaux, lien Metricool). Commit + push (un seul commit pour 8 et 9 suffit).
