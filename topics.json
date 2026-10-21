@@ -12,6 +12,56 @@
   "sujet": "Titre chrome années 80 dans After Effects (tuto pas à pas)"
  },
  {
+  "id": "pr-vhs",
+  "statut": "a_faire",
+  "sujet": "Look VHS dans Premiere Pro : lignes de balayage, couleurs qui bavent, image qui tremble, « PLAY ▶ » + date (tuto pas à pas)"
+ },
+ {
+  "id": "ae-texte-decode",
+  "statut": "a_faire",
+  "sujet": "Texte qui se décode façon hacker dans After Effects : lettres aléatoires qui se figent sur le mot (tuto pas à pas)"
+ },
+ {
+  "id": "ae-neon-synthwave",
+  "statut": "a_faire",
+  "sujet": "Titre néon synthwave qui s'allume en grésillant dans After Effects, avec reflet au sol (tuto pas à pas)"
+ },
+ {
+  "id": "ae-or-brosse",
+  "statut": "a_faire",
+  "sujet": "Titre en or brossé façon luxe dans After Effects : dégradé or, relief fin, reflet lent (tuto pas à pas)"
+ },
+ {
+  "id": "pr-transition-glitch",
+  "statut": "a_faire",
+  "sujet": "Transition glitch entre 2 plans dans Premiere Pro (tuto pas à pas)"
+ },
+ {
+  "id": "ae-hologramme",
+  "statut": "a_faire",
+  "sujet": "Effet hologramme bleuté qui scintille dans After Effects (tuto pas à pas)"
+ },
+ {
+  "id": "ae-generique-70s",
+  "statut": "a_faire",
+  "sujet": "Générique de film années 70 dans After Effects : typo chaude, grain, rayures, image qui saute (tuto pas à pas)"
+ },
+ {
+  "id": "pr-fondu-flou-luxe",
+  "statut": "a_faire",
+  "sujet": "Apparition élégante de texte du flou au net dans Premiere Pro, style luxe (tuto pas à pas)"
+ },
+ {
+  "id": "ae-collage-papier",
+  "statut": "a_faire",
+  "sujet": "Texte découpé façon collage papier dans After Effects, animation image par image (tuto pas à pas)"
+ },
+ {
+  "id": "pr-photocopie-grunge",
+  "statut": "a_faire",
+  "sujet": "Look photocopie / grunge dans Premiere Pro : contraste extrême, grain, couleur d'accent (tuto pas à pas)"
+ },
+ {
   "id": "ae-zoom-impact",
   "statut": "a_faire",
   "sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto pas à pas)"
@@ -25,11 +75,6 @@
   "id": "pr-speed-ramp",
   "statut": "a_faire",
   "sujet": "Speed ramp / velocity edit dans Premiere Pro avec le remappage temporel (tuto manuel)"
- },
- {
-  "id": "ae-glow-neon",
-  "statut": "a_faire",
-  "sujet": "Texte néon synthwave qui scintille dans After Effects (tuto pas à pas)"
  },
  {
   "id": "sites-sons",
