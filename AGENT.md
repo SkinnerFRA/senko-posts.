@@ -1,7 +1,7 @@
 # Agent posts SenkO — procédure hebdomadaire
 
 Tu prépares la semaine de posts du compte **SenkO | Outils créa & IA** (@senkomp4).
-Niche : astuces After Effects & Premiere Pro, outils IA, sites utiles pour créatifs. Ton : tutoiement, direct, concret, français.
+Niche : effets tendance After Effects & Premiere Pro (tuto manuel en slides + script After Effects qui fait l'effet automatiquement, à récupérer via le lien en bio), plus outils IA et sites utiles. Ton : tutoiement, direct, concret, français.
 
 ## Repères fixes
 - Dépôt GitHub : `SkinnerFRA/senko-posts.` (avec le point final), branche `main`, cloné dans `/home/claude/senko-posts.`
@@ -32,12 +32,13 @@ Niche : astuces After Effects & Premiere Pro, outils IA, sites utiles pour créa
    ```
    - 5 à 8 slides : 1 `cover`, contenu (`point` ou `list`, max 4 items par `list`), 1 `cta` en dernier.
    - `*mot*` = surlignage jaune, `_mot_` = violet, `\n` = retour à la ligne. Titres de couverture : max ~11 caractères par ligne.
+   - **Posts « effet »** : cover accrocheuse, 4-6 slides de tuto manuel, CTA final « Le script fait tout en 1 clic » + bouton « Lien dans ma bio ». Pour un effet After Effects, écris aussi `scripts/SenkO_<Effet>.jsx` (ExtendScript, un seul groupe d'annulation, contrôles par curseurs sur un calque nul, alertes en français) et mentionne le script dans la légende.
    - **Exactitude** : raccourcis pour Windows, en français (Maj, Origine…). N'écris que ce dont tu es sûr ; dans le doute, reformule sans le détail incertain.
 4. **Rendre** : `python3 render.py post.json /tmp/rendu/<id>` → JPG + apercu.jpg (hors du dépôt). Regarde l'aperçu.
 5. **Héberger** : copie les JPG des 2 posts dans `tmp/` du dépôt, commit, `git push origin main`.
 6. **Programmer dans Metricool**, pour chaque post : providers instagram+facebook+tiktok, `media` = les URL raw de ses JPG dans l'ordre, `text` = caption, `autoPublish: false` (Alexis valide via la notification Metricool), `draft: false`, `instagramData.type: "POST"`, `facebookData.type: "POST"`, `tiktokData.title` = tiktok_title, `tiktokData.autoAddMusic: true`, date = mardi ou jeudi 10:00. Vérifie dans la réponse que `media` pointe vers `static.metricool.com` (= images copiées).
 7. **Nettoyer** : supprime `tmp/` du dépôt (git rm), commit, push. Metricool a déjà ses copies.
-8. **Script de Reel** (1 par semaine) : sur le sujet du jeudi ou une variante. Écris `reels/AAAA-MM-JJ.md` (date du lundi) : accroche (3 s), script parlé 30-45 s, plans à tourner, textes à l'écran, légende. Court et concret.
+8. **Script de Reel** (1 par semaine) : sur le sujet du jeudi ou une variante. Écris `reels/AAAA-MM-JJ.md` (date du lundi) : accroche visuelle choc (3 s, montrer le résultat d'abord), script parlé 30-45 s rythmé et complice, moment « wow » du script en 1 clic, plans à tourner, textes à l'écran avec emojis, légende avec appel « lien en bio ». Aguicheur, court et concret.
 9. **Mettre à jour** topics.json (sujets passés en `"statut":"fait"`) et journal.md (une ligne par post : date, id, réseaux, lien Metricool). Commit + push (un seul commit pour 8 et 9 suffit).
 10. **Message de fin** (court) : les 2 posts programmés (titre + jour), le fichier du script de Reel, les alertes éventuelles.
 

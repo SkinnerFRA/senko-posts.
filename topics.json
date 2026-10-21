@@ -1,14 +1,79 @@
 [
-  {"id": "ae-raccourcis", "statut": "fait", "pret": "ready/ae-raccourcis.json", "sujet": "5 raccourcis After Effects qui changent tout"},
-  {"id": "pr-raccourcis", "statut": "a_faire", "sujet": "5 raccourcis Premiere Pro pour monter 2x plus vite (Windows)"},
-  {"id": "sites-sons", "statut": "a_faire", "sujet": "5 sites gratuits pour trouver des sons et bruitages (Freesound, Pixabay Sound, Mixkit, Zapsplat, bundle Sonniss GDC) — préciser de vérifier la licence"},
-  {"id": "ae-expressions", "statut": "a_faire", "sujet": "3 expressions After Effects à connaître : wiggle(), loopOut(), time — à quoi elles servent, exemple simple"},
-  {"id": "pr-sous-titres", "statut": "a_faire", "sujet": "Sous-titres automatiques dans Premiere Pro : transcrire puis créer les légendes, en 4 étapes"},
-  {"id": "ae-graph-editor", "statut": "a_faire", "sujet": "Comprendre le Graph Editor d'After Effects : graphe de vitesse vs graphe de valeur, quand utiliser lequel"},
-  {"id": "sites-polices", "statut": "a_faire", "sujet": "5 sources de polices gratuites pour créatifs (Google Fonts, Fontshare, etc.) — rappeler de vérifier l'usage commercial"},
-  {"id": "pr-imbrication", "statut": "a_faire", "sujet": "Premiere Pro : imbrication (nest) vs calque d'effets — différence et cas d'usage"},
-  {"id": "ae-precomp", "statut": "a_faire", "sujet": "After Effects : les 2 options de précomposition expliquées simplement"},
-  {"id": "erreurs-motion", "statut": "a_faire", "sujet": "5 erreurs de débutant en motion design (pas d'easing, trop d'effets, timing, typo illisible, export raté)"},
-  {"id": "export-reseaux", "statut": "a_faire", "sujet": "Mes réglages d'export pour Reels/TikTok depuis Premiere : 1080x1920, 60 i/s, H.264, débit — format vertical"},
-  {"id": "ae-texte-anime", "statut": "a_faire", "sujet": "3 façons rapides d'animer un texte dans After Effects (animateurs de texte, presets, masque de révélation)"}
+{
+"id": "ae-rgb-split",
+"statut": "fait",
+"pret": "ready/ae-rgb-split.json",
+"script": "scripts/SenkO_RGB_Split.jsx",
+"sujet": "Effet RGB split / glitch dans After Effects (tuto manuel + script auto en bio)"
+},
+{
+"id": "ae-zoom-impact",
+"statut": "a_faire",
+"sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto manuel + script auto)"
+},
+{
+"id": "ae-texte-blur-reveal",
+"statut": "a_faire",
+"sujet": "Apparition de texte floue lettre par lettre dans After Effects (animateur de texte + flou) (tuto + script auto)"
+},
+{
+"id": "pr-speed-ramp",
+"statut": "a_faire",
+"sujet": "Speed ramp / velocity edit dans Premiere Pro avec le remappage temporel (tuto manuel)"
+},
+{
+"id": "ae-glow-neon",
+"statut": "a_faire",
+"sujet": "Texte néon qui brille dans After Effects (lueur + scintillement) (tuto + script auto)"
+},
+{
+"id": "sites-sons",
+"statut": "a_faire",
+"sujet": "5 sites gratuits pour trouver des sons et bruitages (Freesound, Pixabay Sound, Mixkit, Zapsplat, bundle Sonniss GDC) — préciser de vérifier la licence"
+},
+{
+"id": "ae-expressions",
+"statut": "a_faire",
+"sujet": "3 expressions After Effects à connaître : wiggle(), loopOut(), time — à quoi elles servent, exemple simple"
+},
+{
+"id": "pr-sous-titres",
+"statut": "a_faire",
+"sujet": "Sous-titres automatiques dans Premiere Pro : transcrire puis créer les légendes, en 4 étapes"
+},
+{
+"id": "ae-graph-editor",
+"statut": "a_faire",
+"sujet": "Comprendre le Graph Editor d'After Effects : graphe de vitesse vs graphe de valeur, quand utiliser lequel"
+},
+{
+"id": "sites-polices",
+"statut": "a_faire",
+"sujet": "5 sources de polices gratuites pour créatifs (Google Fonts, Fontshare, etc.) — rappeler de vérifier l'usage commercial"
+},
+{
+"id": "pr-imbrication",
+"statut": "a_faire",
+"sujet": "Premiere Pro : imbrication (nest) vs calque d'effets — différence et cas d'usage"
+},
+{
+"id": "ae-precomp",
+"statut": "a_faire",
+"sujet": "After Effects : les 2 options de précomposition expliquées simplement"
+},
+{
+"id": "erreurs-motion",
+"statut": "a_faire",
+"sujet": "5 erreurs de débutant en motion design (pas d'easing, trop d'effets, timing, typo illisible, export raté)"
+},
+{
+"id": "export-reseaux",
+"statut": "a_faire",
+"sujet": "Mes réglages d'export pour Reels/TikTok depuis Premiere : 1080x1920, 60 i/s, H.264, débit — format vertical"
+},
+{
+"id": "ae-texte-anime",
+"statut": "a_faire",
+"sujet": "3 façons rapides d'animer un texte dans After Effects (animateurs de texte, presets, masque de révélation)"
+}
 ]
