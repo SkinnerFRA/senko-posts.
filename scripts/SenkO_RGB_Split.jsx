@@ -29,10 +29,9 @@
         ctrl.moveBefore(src);
         ctrl.inPoint = src.inPoint;
         ctrl.outPoint = src.outPoint;
-        var fx = ctrl.property("ADBE Effect Parade");
 
         function slider(name, val) {
-            var s = fx.addProperty("ADBE Slider Control");
+            var s = ctrl.property("ADBE Effect Parade").addProperty("ADBE Slider Control");
             s.name = name;
             s.property(1).setValue(val);
             return s;
@@ -41,7 +40,7 @@
         slider("Intensite glitch", 25);
         slider("Tremblement", 0);
 
-        var jit = fx.addProperty("ADBE Slider Control");
+        var jit = ctrl.property("ADBE Effect Parade").addProperty("ADBE Slider Control");
         jit.name = "_jitter (auto)";
         jit.property(1).expression =
             'var d = effect("Decalage RGB")(1);\n' +
@@ -49,7 +48,7 @@
             'seedRandom(Math.floor(time * 12), true);\n' +
             '(random() < g / 100) ? random(-3, 3) * d : 0;';
 
-        var shk = fx.addProperty("ADBE Point Control");
+        var shk = ctrl.property("ADBE Effect Parade").addProperty("ADBE Point Control");
         shk.name = "_shake (auto)";
         shk.property(1).expression = 'wiggle(15, effect("Tremblement")(1)) - value;';
 
@@ -90,7 +89,7 @@
         src.name = src.name + " [R]";
         ctrl.selected = true;
     } catch (e) {
-        alert("SenkO RGB Split : " + e.toString());
+        alert("SenkO RGB Split : " + e.toString() + (e.line ? " (ligne " + e.line + ")" : ""));
     }
     app.endUndoGroup();
 })();
