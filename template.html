@@ -83,6 +83,16 @@ h3{font-family:"Inter Display","Inter",sans-serif;font-weight:900;font-size:74px
 .shot img{display:block;width:100%}
 .mark{position:absolute;border:5px solid var(--yellow);border-radius:14px;box-shadow:0 0 0 9999px rgba(0,0,0,.0),0 0 30px rgba(255,210,63,.6)}
 .mark span{position:absolute;left:0;top:-52px;background:var(--yellow);color:#111;font-weight:800;font-size:26px;padding:6px 14px;border-radius:10px;white-space:nowrap}
+
+.demo.chrome{background:linear-gradient(180deg,#12062e 0%,#3a0d5e 54%,#0a0612 54%)}
+.demo.chrome .sun{position:absolute;left:50%;top:54%;width:300px;height:300px;border-radius:50%;transform:translate(-50%,-62%);background:linear-gradient(#ffd23f,#ff3ea5 70%);opacity:.55;-webkit-mask-image:repeating-linear-gradient(180deg,#000 0 22px,transparent 22px 30px)}
+.demo.chrome .grid{position:absolute;left:-50%;right:-50%;top:54%;bottom:-40%;background-image:linear-gradient(rgba(255,62,165,.7) 2px,transparent 2px),linear-gradient(90deg,rgba(255,62,165,.7) 2px,transparent 2px);background-size:70px 50px;transform:perspective(300px) rotateX(60deg);transform-origin:top}
+.chr{display:inline-block;line-height:1.05;padding:0 14px;font-style:italic;background:linear-gradient(180deg,#fff 6%,#a8dcff 32%,#1d3fae 52%,#2a1206 52%,#a4521c 66%,#ffb35c 82%,#fff 96%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.75);filter:drop-shadow(0 0 22px rgba(255,62,165,.9)) drop-shadow(0 8px 0 #2a0b4a)}
+.plain{display:inline-block;line-height:1.05;padding:0 14px;font-style:italic;color:#fff}
+.grad{height:90px;border-radius:14px;margin:20px 0 70px;position:relative}
+.stop{position:absolute;bottom:-58px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-family:"DejaVu Sans Mono",monospace;font-size:22px;color:var(--mute)}
+.stop i{width:30px;height:30px;border-radius:6px;border:3px solid #fff}
+.stop.hl i{border-color:var(--yellow);box-shadow:0 0 14px var(--yellow)}
 </style></head><body><div id="root"></div>
 <script>
 const P = window.POST;
@@ -95,6 +105,8 @@ const note=x=>x.note?`<span class="note">${esc(x.note)}</span>`:"";
 function demo(d){
   const o=d.offset??0, t=esc(d.text||"EDIT"), lab=d.label?`<span class="lab${d.hl?" y":""}">${esc(d.label)}</span>`:"";
   const st=`--h:${d.h||430}px;--fs:${d.fs||190}px`;
+  if(d.style==="chrome"||d.style==="plain"){const c=d.style==="chrome";
+    return `<div class="demo${c?" chrome":""}" style="${st}">${lab}${c?`<div class="sun"></div><div class="grid"></div>`:""}<div class="w" style="mix-blend-mode:normal"><span class="${c?"chr":"plain"}">${t}</span></div></div>`;}
   if(!o) return `<div class="demo" style="${st}">${lab}<div class="w">${t}</div></div>`;
   const g=d.glitch?`<div class="scan"></div><div class="scan" style="--st:28%;--sh:14px;--sx:-40px"></div>`:"";
   return `<div class="demo" style="${st}">${lab}<div class="w r" style="transform:translateX(${-o}px)">${t}</div><div class="w g">${t}</div><div class="w bl" style="transform:translateX(${o}px)">${t}</div>${g}</div>`;
@@ -105,6 +117,8 @@ function ui(u){
     return `<div class="shot"><img src="${(P.base||"")+u.img}">${m}</div>`;
   }
   if(u.ui==="demo") return demo(u);
+  if(u.ui==="gradient") return win(u.title||"Dégradé",`<div class="grad" style="background:linear-gradient(90deg,${u.stops.map(x=>x.c+" "+x.p+"%").join(",")})">${u.stops.map(x=>`<span class="stop${x.hl?" hl":""}" style="left:${x.p}%"><i style="background:${x.c}"></i>${x.p}%</span>`).join("")}</div>${u.note?`<div class="row hl"><span class="k">${esc(u.note)}</span></div>`:""}`);
+  if(u.ui==="beforeafter"&&u.style) return `<div class="ba">${demo({...u,style:"plain",label:"AVANT",h:u.h||330,fs:u.fs||150})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330,fs:u.fs||150})}</div>`;
   if(u.ui==="beforeafter") return `<div class="ba">${demo({...u,offset:0,label:"AVANT",h:u.h||330,fs:u.fs||150})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330,fs:u.fs||150})}</div>`;
   if(u.ui==="timeline") return win(u.title||"Montage",`<div class="th"><span>#</span><span class="k">${esc(u.colName||"Nom des calques")}</span><span>${esc(u.colMode||"Mode")}</span></div>`+
     u.rows.map((r,k)=>`<div class="row${r.hl?" hl":""}"><span class="sw" style="background:${r.color||"#8b5cf6"}"></span><span>${k+1}</span><span class="k">${esc(r.name)}</span>${note(r)}${r.mode?`<span class="pill${r.hlmode?" hl":""}">${esc(r.mode)}</span>`:""}</div>`).join(""));
@@ -113,7 +127,7 @@ function ui(u){
   if(u.ui==="menu") return win(u.title||"Menu",`<div class="menus">${u.menus.map((m,k)=>`<div class="menu">${m.head?`<div class="mh">${esc(m.head)}</div>`:""}${m.items.map(it=>`<div class="${it===m.sel?"hl"+(k===u.menus.length-1?" last":""):""}">${esc(it)}${it===m.sel&&k<u.menus.length-1?"  ▸":""}</div>`).join("")}</div>`).join("")}</div>`);
   if(u.ui==="dropdown") return win(u.title||"",`<div class="menu" style="border:none;background:none;padding:0">${u.items.map(it=>`<div class="${it===u.sel?"hl last":""}" style="display:flex">${esc(it)}${it===u.sel&&u.note?`<span class="note" style="background:#111;color:var(--yellow)">${esc(u.note)}</span>`:""}</div>`).join("")}</div>`);
   if(u.ui==="keys"){const bars=Array.from({length:60},(_,k)=>{const b=(u.beats||[]).some(x=>Math.abs(x-k*100/60)<1.2);const h=b?100:15+((k*37)%45);return `<i class="${b?"b":""}" style="height:${h}%"></i>`}).join("");
-    return win(u.title||"Montage",`<div class="track"><span class="lbl">${esc(u.prop||"Position")}</span>${u.keys.map(x=>`<span class="dia" style="left:${x}%"></span>`).join("")}</div><div class="wave">${bars}</div>`);}
+    return win(u.title||"Montage",`<div class="track"><span class="lbl">${esc(u.prop||"Position")}</span>${u.keys.map(x=>`<span class="dia" style="left:${x}%"></span>`).join("")}</div>${u.wave===false?"":`<div class="wave">${bars}</div>`}`);}
   if(u.ui==="sliders") return win(u.title||"Effets",u.items.map(it=>`<div class="sl"><div class="t"><span>${esc(it.k)}</span><b>${esc(it.v)}</b></div><div class="r"><i style="width:${it.p}%"></i><u style="left:${it.p}%"></u></div></div>`).join(""));
   return "";
 }
