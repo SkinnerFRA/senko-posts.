@@ -1,0 +1,183 @@
+{
+ "id": "ae-inflate",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "AFTER EFFECTS",
+   "title": "L'effet IA\n*sans IA.*",
+   "size": 130,
+   "sub": "Le « Inflate » viral de TikTok, fait à la main dans After Effects.",
+   "visual": {
+    "ui": "demo",
+    "style": "inflate",
+    "h": 420
+   }
+  },
+  {
+   "type": "visual",
+   "title": "Ce que tu vas _obtenir_",
+   "visual": {
+    "ui": "beforeafter",
+    "style": "inflate",
+    "h": 330
+   },
+   "body": "N'importe quel objet gonfle comme un ballon brillant… puis s'envole."
+  },
+  {
+   "type": "tuto",
+   "title": "Détoure _l'objet_",
+   "visual": {
+    "ui": "effects",
+    "title": "Calque : ta vidéo",
+    "effect": "Roto-pinceau",
+    "params": [
+     {
+      "k": "Peins sur l'objet",
+      "v": "vert",
+      "hl": true,
+      "note": "à garder"
+     },
+     {
+      "k": "Alt + peindre",
+      "v": "rouge",
+      "note": "à retirer"
+     },
+     {
+      "k": "Résultat",
+      "v": "objet seul"
+     }
+    ]
+   },
+   "body": "Double-clique ta vidéo et peins l'objet, sur une copie du calque.",
+   "chip": "Alt + W = Roto-pinceau"
+  },
+  {
+   "type": "tuto",
+   "title": "Bouche le _trou_",
+   "visual": {
+    "ui": "menu",
+    "title": "Menu",
+    "menus": [
+     {
+      "head": "Fenêtre",
+      "items": [
+       "…",
+       "Remplissage d'après le contenu",
+       "…"
+      ],
+      "sel": "Remplissage d'après le contenu"
+     }
+    ]
+   },
+   "body": "Sur la copie du dessous : masque autour de l'objet (mode Soustraire), puis lance le remplissage. Le décor se reconstruit."
+  },
+  {
+   "type": "tuto",
+   "title": "Fais-le _gonfler_",
+   "visual": {
+    "ui": "effects",
+    "title": "Effets : objet",
+    "effect": "Renflement",
+    "params": [
+     {
+      "k": "Rayon horizontal",
+      "v": "180"
+     },
+     {
+      "k": "Rayon vertical",
+      "v": "180"
+     },
+     {
+      "k": "Hauteur du renflement",
+      "v": "0 → 3",
+      "hl": true,
+      "note": "à animer"
+     }
+    ]
+   },
+   "body": "Effet > Déformation > Renflement, centré sur l'objet, + un peu d'échelle.",
+   "chip": "S = Échelle : 100 → 130 %"
+  },
+  {
+   "type": "tuto",
+   "title": "Rends-le _brillant_",
+   "visual": {
+    "ui": "timeline",
+    "title": "Composition",
+    "rows": [
+     {
+      "name": "Reflet (ellipse blanche floue)",
+      "color": "#ffffff",
+      "mode": "Écran",
+      "hlmode": true
+     },
+     {
+      "name": "Objet gonflé",
+      "color": "#ffd23f",
+      "mode": "Normal"
+     },
+     {
+      "name": "Décor rebouché",
+      "color": "#8b5cf6",
+      "mode": "Normal"
+     }
+    ]
+   },
+   "body": "Une ellipse blanche sur le haut de l'objet, du flou gaussien, mode Écran : c'est l'effet ballon. Lie-la à l'objet (Parent).",
+   "chip": "Q = outil Ellipse"
+  },
+  {
+   "type": "tuto",
+   "title": "Fais-le _s'envoler_",
+   "visual": {
+    "ui": "keys",
+    "title": "Objet gonflé",
+    "prop": "Position  ↑",
+    "keys": [
+     40,
+     92
+    ],
+    "wave": false
+   },
+   "body": "2 images clés de position vers le haut, lissées. Bonus : un léger balancement sur la rotation.",
+   "chip": "F9 = Easy Ease · wiggle(1, 8)"
+  },
+  {
+   "type": "tuto",
+   "title": "Le détail _réaliste_",
+   "visual": {
+    "ui": "effects",
+    "title": "Composition",
+    "effect": "Flou de mouvement",
+    "params": [
+     {
+      "k": "Case du calque",
+      "v": "ON",
+      "hl": true,
+      "note": "objet + reflet"
+     },
+     {
+      "k": "Bouton de la compo",
+      "v": "ON",
+      "hl": true,
+      "note": "en haut"
+     }
+    ]
+   },
+   "body": "Avec le flou de mouvement, l'envol devient crédible. C'est ce qui fait « IA »."
+  },
+  {
+   "type": "cta",
+   "title": "Enregistre\n_ce tuto._",
+   "button": "Abonne-toi",
+   "question": "Quel effet IA je refais à la main ensuite ?",
+   "visual": {
+    "ui": "demo",
+    "style": "inflate",
+    "h": 300
+   }
+  }
+ ],
+ "caption": "L'effet « Inflate » qui cartonne sur TikTok… sans IA 🎈\n\nRoto-pinceau, Renflement, un reflet en mode Écran et un envol : tout se fait dans After Effects.\n\nEnregistre ce tuto pour l'avoir sous la main 📌\n\n👇 Dis-moi quel effet IA je refais à la main la prochaine fois\n\n#aftereffects #motiondesign #inflate #effetia #tutoaftereffects #vfx #monteurvideo",
+ "tiktok_title": "L'effet IA de TikTok… sans IA 🎈"
+}

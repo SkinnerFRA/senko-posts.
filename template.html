@@ -93,6 +93,9 @@ h3{font-family:"Inter Display","Inter",sans-serif;font-weight:900;font-size:74px
 .stop{position:absolute;bottom:-58px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;font-family:"DejaVu Sans Mono",monospace;font-size:22px;color:var(--mute)}
 .stop i{width:30px;height:30px;border-radius:6px;border:3px solid #fff}
 .stop.hl i{border-color:var(--yellow);box-shadow:0 0 14px var(--yellow)}
+
+.demo.inflate{background:radial-gradient(500px 320px at 50% 40%,#2c1f4d,#0b0913 75%)}
+.demo.inflate svg{position:absolute;inset:0;width:100%;height:100%}
 </style></head><body><div id="root"></div>
 <script>
 const P = window.POST;
@@ -105,6 +108,17 @@ const note=x=>x.note?`<span class="note">${esc(x.note)}</span>`:"";
 function demo(d){
   const o=d.offset??0, t=esc(d.text||"EDIT"), lab=d.label?`<span class="lab${d.hl?" y":""}">${esc(d.label)}</span>`:"";
   const st=`--h:${d.h||430}px;--fs:${d.fs||190}px`;
+  if(d.style==="inflate"){
+    const star=(r1,r2)=>Array.from({length:10},(_,k)=>{const a=-Math.PI/2+k*Math.PI/5,r=k%2?r2:r1;return (r*Math.cos(a)).toFixed(1)+","+(r*Math.sin(a)).toFixed(1)}).join(" ");
+    const flat=(x,y,sc)=>`<g transform="translate(${x},${y}) scale(${sc})"><ellipse cx="0" cy="118" rx="95" ry="14" fill="#000" opacity=".5"/><polygon points="${star(105,45)}" fill="#ffd23f" stroke="#c99a00" stroke-width="4"/></g>`;
+    const puff=(x,y,sc)=>`<g transform="translate(${x},${y+150*sc}) scale(${sc})"><ellipse cx="0" cy="0" rx="70" ry="10" fill="#000" opacity=".35"/></g><g transform="translate(${x},${y}) scale(${sc}) rotate(-8)"><defs><radialGradient id="gl${x}" cx="35%" cy="28%" r="75%"><stop offset="0" stop-color="#fff7c2"/><stop offset=".45" stop-color="#ffc21a"/><stop offset="1" stop-color="#d07a00"/></radialGradient></defs><polygon points="${star(100,52)}" fill="url(#gl${x})" stroke="url(#gl${x})" stroke-width="58" stroke-linejoin="round"/><ellipse cx="-38" cy="-52" rx="34" ry="16" fill="#fff" opacity=".85" transform="rotate(-25 -38 -52)"/><ellipse cx="40" cy="-8" rx="10" ry="6" fill="#fff" opacity=".6"/></g>`;
+    const W=900,H=d.h||430,lab=d.label?`<span class="lab${d.hl?" y":""}">${esc(d.label)}</span>`:"";
+    let g="";
+    if(d.state==="flat") g=flat(W/2,H/2-10,H/430);
+    else if(d.state==="puff") g=puff(W/2,H/2-30,H/430*1.05);
+    else g=flat(W*0.24,H/2,H/430*1.05)+`<text x="${W/2}" y="${H/2+20}" text-anchor="middle" font-size="90" font-weight="900" fill="#c084fc">→</text>`+puff(W*0.76,H/2-40,H/430*1.1);
+    return `<div class="demo inflate" style="--h:${H}px">${lab}<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">${g}</svg></div>`;
+  }
   if(d.style==="chrome"||d.style==="plain"){const c=d.style==="chrome";
     return `<div class="demo${c?" chrome":""}" style="${st}">${lab}${c?`<div class="sun"></div><div class="grid"></div>`:""}<div class="w" style="mix-blend-mode:normal"><span class="${c?"chr":"plain"}">${t}</span></div></div>`;}
   if(!o) return `<div class="demo" style="${st}">${lab}<div class="w">${t}</div></div>`;
@@ -118,6 +132,7 @@ function ui(u){
   }
   if(u.ui==="demo") return demo(u);
   if(u.ui==="gradient") return win(u.title||"Dégradé",`<div class="grad" style="background:linear-gradient(90deg,${u.stops.map(x=>x.c+" "+x.p+"%").join(",")})">${u.stops.map(x=>`<span class="stop${x.hl?" hl":""}" style="left:${x.p}%"><i style="background:${x.c}"></i>${x.p}%</span>`).join("")}</div>${u.note?`<div class="row hl"><span class="k">${esc(u.note)}</span></div>`:""}`);
+  if(u.ui==="beforeafter"&&u.style==="inflate") return `<div class="ba">${demo({...u,state:"flat",label:"AVANT",h:u.h||330})}${demo({...u,state:"puff",label:"APRÈS",hl:true,h:u.h||330})}</div>`;
   if(u.ui==="beforeafter"&&u.style) return `<div class="ba">${demo({...u,style:"plain",label:"AVANT",h:u.h||330,fs:u.fs||150})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330,fs:u.fs||150})}</div>`;
   if(u.ui==="beforeafter") return `<div class="ba">${demo({...u,offset:0,label:"AVANT",h:u.h||330,fs:u.fs||150})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330,fs:u.fs||150})}</div>`;
   if(u.ui==="timeline") return win(u.title||"Montage",`<div class="th"><span>#</span><span class="k">${esc(u.colName||"Nom des calques")}</span><span>${esc(u.colMode||"Mode")}</span></div>`+
