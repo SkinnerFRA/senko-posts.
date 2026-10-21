@@ -49,15 +49,16 @@
         ctrl.inPoint = src.inPoint;
         ctrl.outPoint = src.outPoint;
         ctrl.moveBefore(src);
+        // NB : ajouter un effet rend invalides les références aux effets déjà ajoutés
+        // sur le même calque -> on règle chaque curseur juste après l'avoir créé.
         var cfx = ctrl.property("ADBE Effect Parade");
         var reflet = cfx.addProperty("ADBE Slider Control");
         reflet.name = "Reflet (%)";
+        reflet.property(1).setValueAtTime(t0 + 0.6, 0);
+        reflet.property(1).setValueAtTime(t0 + 1.6, 100);
         var halo = cfx.addProperty("ADBE Slider Control");
         halo.name = "Halo neon";
         halo.property(1).setValue(80);
-        var rv = reflet.property(1);
-        rv.setValueAtTime(t0 + 0.6, 0);
-        rv.setValueAtTime(t0 + 1.6, 100);
 
         // --- Duplicats : sol (dessus) et halo (dessous) ---
         var sol = src.duplicate();
@@ -126,8 +127,10 @@
         sc.setValueAtTime(t0, [130, 130, 100]);
         sc.setValueAtTime(t0 + 0.6, [100, 100, 100]);
         var ease = new KeyframeEase(0, 75);
-        sc.setTemporalEaseAtKey(1, [ease, ease, ease], [ease, ease, ease]);
-        sc.setTemporalEaseAtKey(2, [ease, ease, ease], [ease, ease, ease]);
+        for (var k = 1; k <= 2; k++) {
+            try { sc.setTemporalEaseAtKey(k, [ease, ease, ease], [ease, ease, ease]); }
+            catch (e1) { sc.setTemporalEaseAtKey(k, [ease, ease], [ease, ease]); }
+        }
 
         ctrl.selected = true;
     } catch (e) {
