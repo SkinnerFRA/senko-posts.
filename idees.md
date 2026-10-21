@@ -14,7 +14,7 @@
 ## Recherche d'idées
 - Sources : https://www.motionelements.com/fr/after-effects-templates et https://www.motionelements.com/fr/premiere-pro-templates
 - Les pages produit (`/fr/after-effects-template-...`) s'ouvrent ; les liens `/embed/...` sont bloqués.
-- Pour chaque idée retenue : recréer le look sans plugin, tuto manuel en slides + script `.jsx` (After Effects) ou bonus (LUT `.cube`, tuto) pour Premiere Pro.
+- Pour chaque idée retenue : recréer le look sans plugin, tuto pas à pas en slides (After Effects ou Premiere Pro). Pas de script.
 
 ## Liste d'Alexis
 (à compléter quand Alexis enverra sa liste)

@@ -1,7 +1,7 @@
 # Agent posts SenkO — procédure hebdomadaire
 
 Tu prépares la semaine de posts du compte **SenkO | Outils créa & IA** (@senkomp4).
-Niche : effets tendance After Effects & Premiere Pro (tuto manuel en slides + script After Effects qui fait l'effet automatiquement, à récupérer via le lien en bio), plus outils IA et sites utiles. Ton : tutoiement, direct, concret, français.
+Niche : effets tendance After Effects & Premiere Pro (tutos pas à pas en slides, pas de script), plus outils IA et sites utiles. Ton : tutoiement, direct, concret, français.
 
 ## Repères fixes
 - Dépôt GitHub : `SkinnerFRA/senko-posts.` (avec le point final), branche `main`, cloné dans `/home/claude/senko-posts.`
@@ -37,16 +37,16 @@ Niche : effets tendance After Effects & Premiere Pro (tuto manuel en slides + sc
      - `cover` et `cta` acceptent aussi un `visual`.
    - `visual` possibles :
      - **Vraie capture** (prioritaire) : `{"img":"captures/<id>/01.png","marks":[{"x":10,"y":20,"w":30,"h":8,"label":"Ici"}]}` (cadres jaunes en % de l'image). Si Alexis a déposé des captures dans `captures/<id>/`, utilise-les.
-     - Sinon, maquettes d'interface : `timeline` (rows: name, color, mode, hl, hlmode, note), `effects` (effect, params: k, v, hl, note), `menu` (menus: head, items, sel), `dropdown` (items, sel, note), `keys` (prop, keys %, beats %), `sliders` (items: k, v, p %), `demo` (text, offset, glitch), `beforeafter` (text, offset, glitch).
+     - Sinon, maquettes d'interface : `timeline` (rows: name, color, mode, hl, hlmode, note), `effects` (effect, params: k, v, hl, note), `menu` (menus: head, items, sel), `dropdown` (items, sel, note), `keys` (prop, keys %, beats %), `demo` (text, offset, glitch), `beforeafter` (text, offset, glitch).
    - Exemple complet : `ready/ae-rgb-split.json`.
    - `*mot*` = surlignage jaune, `_mot_` = violet, `\n` = retour à la ligne. Titres de couverture : max ~11 caractères par ligne.
-   - **Posts « effet »** : cover accrocheuse, 4-6 slides de tuto manuel, CTA final « Le script fait tout en 1 clic » + bouton « Lien dans ma bio ». Pour un effet After Effects, écris aussi `scripts/SenkO_<Effet>.jsx` (ExtendScript, un seul groupe d'annulation, contrôles par curseurs sur un calque nul, alertes en français) et mentionne le script dans la légende.
+   - **Posts « effet »** : cover accrocheuse avec le rendu final, avant/après, 4-6 slides `tuto` qui montrent chaque étape, CTA final « Enregistre ce tuto » + « Abonne-toi » + question. **Pas de script ni de fichier à télécharger.**
    - **Exactitude** : raccourcis pour Windows, en français (Maj, Origine…). N'écris que ce dont tu es sûr ; dans le doute, reformule sans le détail incertain.
 4. **Rendre** : `python3 render.py post.json /tmp/rendu/<id>` → JPG + apercu.jpg (hors du dépôt). Regarde l'aperçu.
 5. **Héberger** : copie les JPG des 2 posts dans `tmp/` du dépôt, commit, `git push origin main`.
 6. **Programmer dans Metricool**, pour chaque post : providers instagram+facebook+tiktok, `media` = les URL raw de ses JPG dans l'ordre, `text` = caption, `autoPublish: false` (Alexis valide via la notification Metricool), `draft: false`, `instagramData.type: "POST"`, `facebookData.type: "POST"`, `tiktokData.title` = tiktok_title, `tiktokData.autoAddMusic: true`, date = mardi ou jeudi 10:00. **Avant de créer**, vérifie avec getScheduledPosts que le créneau est libre : s'il est déjà pris (post préparé à la main), ne programme rien dessus et garde le sujet en `a_faire`. Vérifie dans la réponse que `media` pointe vers `static.metricool.com` (= images copiées).
 7. **Nettoyer** : supprime `tmp/` du dépôt (git rm), commit, push. Metricool a déjà ses copies.
-8. **Script de Reel** (1 par semaine) : sur le sujet du jeudi ou une variante. Écris `reels/AAAA-MM-JJ.md` (date du lundi) : accroche visuelle choc (3 s, montrer le résultat d'abord), script parlé 30-45 s rythmé et complice, moment « wow » du script en 1 clic, plans à tourner, textes à l'écran avec emojis, légende avec appel « lien en bio ». Aguicheur, court et concret.
+8. **Script de Reel** (1 par semaine) : sur le sujet du jeudi ou une variante. Écris `reels/AAAA-MM-JJ.md` (date du lundi) : accroche visuelle choc (3 s, montrer le résultat d'abord), script parlé 30-45 s rythmé et complice, moment « wow » du résultat final, plans à tourner, textes à l'écran avec emojis, légende avec question pour les commentaires. Aguicheur, court et concret.
 9. **Mettre à jour** topics.json (sujets passés en `"statut":"fait"`) et journal.md (une ligne par post : date, id, réseaux, lien Metricool). Commit + push (un seul commit pour 8 et 9 suffit).
 10. **Message de fin** (court) : les 2 posts programmés (titre + jour), le fichier du script de Reel, les alertes éventuelles.
 

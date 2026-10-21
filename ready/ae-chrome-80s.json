@@ -1,12 +1,205 @@
-{"id":"ae-chrome-80s","slides":[
- {"type":"cover","tag":"AFTER EFFECTS","title":"Titre chrome\n*années 80.*","size":118,"sub":"Le look rétro des génériques, sans plugin. Tuto + script auto.","visual":{"ui":"demo","style":"chrome","text":"RETRO","h":440,"fs":200}},
- {"type":"visual","title":"Ce que tu vas _obtenir_","visual":{"ui":"beforeafter","style":"chrome","text":"RETRO","h":340,"fs":160},"body":"Un simple texte blanc devient un titre chrome digne d'une VHS de 1985."},
- {"type":"tuto","title":"Un texte _bien gras_","visual":{"ui":"effects","title":"Caractère","effect":"Ton titre","params":[{"k":"Police","v":"très grasse","hl":true,"note":"Black / Heavy"},{"k":"Style","v":"italique"},{"k":"Couleur","v":"blanc"}]},"body":"Plus la police est épaisse, plus le chrome se voit.","chip":"Ctrl + T = outil Texte"},
- {"type":"tuto","title":"Ajoute un _dégradé_","visual":{"ui":"menu","title":"Menu","menus":[{"head":"Calque","items":["Nouveau","…","Styles de calque","Transformer"],"sel":"Styles de calque"},{"head":"Styles de calque","items":["Ombre portée","Lueur externe","Biseautage et estampage","Incrustation en dégradé","Contour"],"sel":"Incrustation en dégradé"}]},"body":"Les styles de calque, c'est comme dans Photoshop."},
- {"type":"tuto","title":"Le secret : _l'horizon_","visual":{"ui":"gradient","title":"Éditeur de dégradé","stops":[{"c":"#ffffff","p":0},{"c":"#a8dcff","p":30},{"c":"#1d3fae","p":50,"hl":true},{"c":"#2a1206","p":50,"hl":true},{"c":"#ffb35c","p":80},{"c":"#ffffff","p":100}],"note":"2 repères à 50 % = la ligne d'horizon nette"},"body":"Ciel en haut (blanc → bleu), sol en bas (marron → orange). À l'envers ? Coche Inverser."},
- {"type":"tuto","title":"Le relief et le _néon_","visual":{"ui":"effects","title":"Styles de calque","effect":"Ton titre","params":[{"k":"Biseautage et estampage","v":"ON","hl":true,"note":"relief"},{"k":"Contour","v":"ON","hl":true,"note":"violet foncé"},{"k":"Lueur externe","v":"ON","hl":true,"note":"rose"}]},"body":"Le biseau donne le métal, le contour le détache, la lueur rose fait le néon."},
- {"type":"tuto","title":"Le _reflet_ qui passe","visual":{"ui":"keys","title":"CC Light Sweep","prop":"Center","keys":[35,70],"wave":false},"body":"Ajoute le reflet, puis anime son centre de gauche à droite avec 2 images clés.","chip":"Effet > Générer > CC Light Sweep"},
- {"type":"tuto","title":"L'entrée _qui claque_","visual":{"ui":"keys","title":"Transformer","prop":"Échelle  130 % → 100 %","keys":[8,30],"wave":false},"body":"2 images clés d'échelle, puis lissage pour un arrêt tout en douceur.","chip":"S = Échelle · F9 = Easy Ease"},
- {"type":"cta","title":"Ou mon script\n_fait tout._","button":"Lien dans ma bio","question":"Tu veux quel style rétro ensuite ?","visual":{"ui":"sliders","title":"SENKO CHROME","items":[{"k":"Reflet (%)","v":"0 → 100","p":60},{"k":"Halo neon","v":"80","p":80}]}}],
- "caption":"Le titre chrome années 80 sur After Effects, sans plugin 🌆✨\n\nLe secret : 2 repères au même endroit dans le dégradé pour la ligne d'horizon.\n\nFlemme de tout régler ? Mon script transforme ton texte en 1 clic 👉 lien dans ma bio\n\nEnregistre pour plus tard 📌\n\n#aftereffects #motiondesign #retro #synthwave #80s #tutoaftereffects #titredesign",
- "tiktok_title":"Titre chrome années 80 sur After Effects 🌆"}
+{
+ "id": "ae-chrome-80s",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "AFTER EFFECTS",
+   "title": "Titre chrome\n*années 80.*",
+   "size": 118,
+   "sub": "Le look rétro des génériques, sans plugin. Tuto pas à pas.",
+   "visual": {
+    "ui": "demo",
+    "style": "chrome",
+    "text": "RETRO",
+    "h": 440,
+    "fs": 200
+   }
+  },
+  {
+   "type": "visual",
+   "title": "Ce que tu vas _obtenir_",
+   "visual": {
+    "ui": "beforeafter",
+    "style": "chrome",
+    "text": "RETRO",
+    "h": 340,
+    "fs": 160
+   },
+   "body": "Un simple texte blanc devient un titre chrome digne d'une VHS de 1985."
+  },
+  {
+   "type": "tuto",
+   "title": "Un texte _bien gras_",
+   "visual": {
+    "ui": "effects",
+    "title": "Caractère",
+    "effect": "Ton titre",
+    "params": [
+     {
+      "k": "Police",
+      "v": "très grasse",
+      "hl": true,
+      "note": "Black / Heavy"
+     },
+     {
+      "k": "Style",
+      "v": "italique"
+     },
+     {
+      "k": "Couleur",
+      "v": "blanc"
+     }
+    ]
+   },
+   "body": "Plus la police est épaisse, plus le chrome se voit.",
+   "chip": "Ctrl + T = outil Texte"
+  },
+  {
+   "type": "tuto",
+   "title": "Ajoute un _dégradé_",
+   "visual": {
+    "ui": "menu",
+    "title": "Menu",
+    "menus": [
+     {
+      "head": "Calque",
+      "items": [
+       "Nouveau",
+       "…",
+       "Styles de calque",
+       "Transformer"
+      ],
+      "sel": "Styles de calque"
+     },
+     {
+      "head": "Styles de calque",
+      "items": [
+       "Ombre portée",
+       "Lueur externe",
+       "Biseautage et estampage",
+       "Incrustation en dégradé",
+       "Contour"
+      ],
+      "sel": "Incrustation en dégradé"
+     }
+    ]
+   },
+   "body": "Les styles de calque, c'est comme dans Photoshop."
+  },
+  {
+   "type": "tuto",
+   "title": "Le secret : _l'horizon_",
+   "visual": {
+    "ui": "gradient",
+    "title": "Éditeur de dégradé",
+    "stops": [
+     {
+      "c": "#ffffff",
+      "p": 0
+     },
+     {
+      "c": "#a8dcff",
+      "p": 30
+     },
+     {
+      "c": "#1d3fae",
+      "p": 50,
+      "hl": true
+     },
+     {
+      "c": "#2a1206",
+      "p": 50,
+      "hl": true
+     },
+     {
+      "c": "#ffb35c",
+      "p": 80
+     },
+     {
+      "c": "#ffffff",
+      "p": 100
+     }
+    ],
+    "note": "2 repères à 50 % = la ligne d'horizon nette"
+   },
+   "body": "Ciel en haut (blanc → bleu), sol en bas (marron → orange). À l'envers ? Coche Inverser."
+  },
+  {
+   "type": "tuto",
+   "title": "Le relief et le _néon_",
+   "visual": {
+    "ui": "effects",
+    "title": "Styles de calque",
+    "effect": "Ton titre",
+    "params": [
+     {
+      "k": "Biseautage et estampage",
+      "v": "ON",
+      "hl": true,
+      "note": "relief"
+     },
+     {
+      "k": "Contour",
+      "v": "ON",
+      "hl": true,
+      "note": "violet foncé"
+     },
+     {
+      "k": "Lueur externe",
+      "v": "ON",
+      "hl": true,
+      "note": "rose"
+     }
+    ]
+   },
+   "body": "Le biseau donne le métal, le contour le détache, la lueur rose fait le néon."
+  },
+  {
+   "type": "tuto",
+   "title": "Le _reflet_ qui passe",
+   "visual": {
+    "ui": "keys",
+    "title": "CC Light Sweep",
+    "prop": "Center",
+    "keys": [
+     35,
+     70
+    ],
+    "wave": false
+   },
+   "body": "Ajoute le reflet, puis anime son centre de gauche à droite avec 2 images clés.",
+   "chip": "Effet > Générer > CC Light Sweep"
+  },
+  {
+   "type": "tuto",
+   "title": "L'entrée _qui claque_",
+   "visual": {
+    "ui": "keys",
+    "title": "Transformer",
+    "prop": "Échelle  130 % → 100 %",
+    "keys": [
+     8,
+     30
+    ],
+    "wave": false
+   },
+   "body": "2 images clés d'échelle, puis lissage pour un arrêt tout en douceur.",
+   "chip": "S = Échelle · F9 = Easy Ease"
+  },
+  {
+   "type": "cta",
+   "title": "Enregistre\n_ce tuto._",
+   "button": "Abonne-toi",
+   "question": "Tu veux quel style rétro ensuite ?",
+   "visual": {
+    "ui": "demo",
+    "style": "chrome",
+    "text": "RETRO",
+    "h": 300,
+    "fs": 150
+   }
+  }
+ ],
+ "caption": "Le titre chrome années 80 sur After Effects, sans plugin 🌆✨\n\nLe secret : 2 repères au même endroit dans le dégradé pour la ligne d'horizon.\n\nEnregistre ce tuto pour l'avoir sous la main 📌\n\n👇 Dis-moi en commentaire quel style rétro tu veux ensuite\n\n#aftereffects #motiondesign #retro #synthwave #80s #tutoaftereffects #titredesign",
+ "tiktok_title": "Titre chrome années 80 sur After Effects 🌆"
+}

@@ -3,25 +3,23 @@
   "id": "ae-rgb-split",
   "statut": "fait",
   "pret": "ready/ae-rgb-split.json",
-  "script": "scripts/SenkO_RGB_Split.jsx",
-  "sujet": "Effet RGB split / glitch dans After Effects (tuto manuel + script auto en bio)"
+  "sujet": "Effet RGB split / glitch dans After Effects (tuto pas à pas)"
  },
  {
   "id": "ae-chrome-80s",
   "statut": "fait",
   "pret": "ready/ae-chrome-80s.json",
-  "script": "scripts/SenkO_Chrome_80s.jsx",
-  "sujet": "Titre chrome années 80 dans After Effects (tuto + script auto)"
+  "sujet": "Titre chrome années 80 dans After Effects (tuto pas à pas)"
  },
  {
   "id": "ae-zoom-impact",
   "statut": "a_faire",
-  "sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto manuel + script auto)"
+  "sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto pas à pas)"
  },
  {
   "id": "ae-texte-blur-reveal",
   "statut": "a_faire",
-  "sujet": "Apparition de texte floue lettre par lettre dans After Effects (animateur de texte + flou) (tuto + script auto)"
+  "sujet": "Apparition de texte floue lettre par lettre dans After Effects (animateur de texte + flou) (tuto pas à pas)"
  },
  {
   "id": "pr-speed-ramp",
@@ -31,7 +29,7 @@
  {
   "id": "ae-glow-neon",
   "statut": "a_faire",
-  "sujet": "Texte néon synthwave qui scintille dans After Effects (tuto + script auto)"
+  "sujet": "Texte néon synthwave qui scintille dans After Effects (tuto pas à pas)"
  },
  {
   "id": "sites-sons",
