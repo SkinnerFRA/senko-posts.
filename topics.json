@@ -1,5 +1,5 @@
 [
-  {"id": "ae-raccourcis", "statut": "a_faire", "pret": "ready/ae-raccourcis.json", "sujet": "5 raccourcis After Effects qui changent tout"},
+  {"id": "ae-raccourcis", "statut": "fait", "pret": "ready/ae-raccourcis.json", "sujet": "5 raccourcis After Effects qui changent tout"},
   {"id": "pr-raccourcis", "statut": "a_faire", "sujet": "5 raccourcis Premiere Pro pour monter 2x plus vite (Windows)"},
   {"id": "sites-sons", "statut": "a_faire", "sujet": "5 sites gratuits pour trouver des sons et bruitages (Freesound, Pixabay Sound, Mixkit, Zapsplat, bundle Sonniss GDC) — préciser de vérifier la licence"},
   {"id": "ae-expressions", "statut": "a_faire", "sujet": "3 expressions After Effects à connaître : wiggle(), loopOut(), time — à quoi elles servent, exemple simple"},
