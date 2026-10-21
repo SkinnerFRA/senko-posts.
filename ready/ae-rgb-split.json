@@ -1,0 +1,10 @@
+{"id":"ae-rgb-split","slides":[
+ {"type":"cover","tag":"AFTER EFFECTS","title":"L'effet\nRGB split\n*en 5 min.*","sub":"Le glitch qu'on voit dans tous les edits. Tuto + script auto."},
+ {"type":"point","num":"01","title":"3 calques, _3 couleurs_","body":"Sélectionne ta vidéo et duplique-la 2 fois. Nomme-les Rouge, Vert et Bleu.","chip":"Ctrl + D  (x2)"},
+ {"type":"point","num":"02","title":"Isole _chaque couche_","body":"Sur Rouge : Vert-Vert et Bleu-Bleu à 0. Même logique sur Vert et Bleu.","chip":"Effet > Couches > Mélangeur de couches"},
+ {"type":"point","num":"03","title":"Passe en _mode Écran_","body":"Mets les 2 calques du dessus en mode Écran : ton image d'origine réapparaît.","chip":"Mode de fusion : Écran"},
+ {"type":"point","num":"04","title":"Écarte le _rouge_ et le _bleu_","body":"Rouge quelques pixels à gauche, bleu à droite. L'aberration chromatique est là.","chip":"P  (Position)"},
+ {"type":"point","num":"05","title":"Fais-le _glitcher_","body":"Ajoute des images clés en saccade sur les temps forts de ta musique.","chip":"Alt + clic sur le chrono = expression"},
+ {"type":"cta","title":"Le script\n_fait tout_\nen 1 clic.","button":"Lien dans ma bio","question":"Quel effet tu veux la semaine pro ?"}],
+ "caption":"L'effet RGB split / glitch des edits, en 5 étapes sur After Effects 🔴🟢🔵\n\nFlemme de le refaire à la main ? Mon script le fait en 1 clic, réglable (décalage, glitch, tremblement) 👉 lien dans ma bio\n\nEnregistre pour plus tard 📌\n\n#aftereffects #motiondesign #glitcheffect #rgbsplit #tutoaftereffects #monteurvideo #edit",
+ "tiktok_title":"RGB split en 5 min sur After Effects 🔴🟢🔵"}
