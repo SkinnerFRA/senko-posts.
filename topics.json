@@ -34,8 +34,9 @@
  },
  {
   "id": "ae-glow-neon",
-  "statut": "a_faire",
-  "sujet": "Texte néon synthwave qui scintille dans After Effects (tuto pas à pas)"
+  "statut": "fait",
+  "sujet": "Texte néon synthwave qui scintille dans After Effects (tuto pas à pas)",
+  "pret": "ready/ae-glow-neon.json"
  },
  {
   "id": "sites-sons",
