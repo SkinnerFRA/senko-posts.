@@ -19,15 +19,13 @@
  },
  {
   "id": "ae-zoom-impact",
-  "statut": "fait",
-  "sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto pas à pas)",
-  "pret": "ready/ae-zoom-impact.json"
+  "statut": "refuse",
+  "sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto pas à pas)"
  },
  {
   "id": "ae-texte-blur-reveal",
-  "statut": "fait",
-  "sujet": "Apparition de texte floue lettre par lettre dans After Effects (animateur de texte + flou) (tuto pas à pas)",
-  "pret": "ready/ae-texte-blur-reveal.json"
+  "statut": "refuse",
+  "sujet": "Apparition de texte floue lettre par lettre dans After Effects (animateur de texte + flou) (tuto pas à pas)"
  },
  {
   "id": "pr-speed-ramp",
@@ -90,5 +88,17 @@
   "id": "ae-texte-anime",
   "statut": "a_faire",
   "sujet": "3 façons rapides d'animer un texte dans After Effects (animateurs de texte, presets, masque de révélation)"
+ },
+ {
+  "id": "ae-flamme-pixel",
+  "statut": "fait",
+  "pret": "ready/ae-flamme-pixel.json",
+  "sujet": "Flamme animée transformée en pixel art de vieux jeu vidéo dans After Effects (tuto pas à pas)"
+ },
+ {
+  "id": "ae-dialogue-rpg",
+  "statut": "fait",
+  "pret": "ready/ae-dialogue-rpg.json",
+  "sujet": "Boîte de dialogue de vieux RPG, texte lettre par lettre + flèche qui clignote dans After Effects (tuto pas à pas)"
  }
 ]
