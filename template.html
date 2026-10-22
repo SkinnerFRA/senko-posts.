@@ -106,6 +106,14 @@ h3{font-family:"Inter Display","Inter",sans-serif;font-weight:900;font-size:74px
 .demo.blur .w{mix-blend-mode:normal}
 .demo .bl0{filter:blur(0)}.demo .bl1{filter:blur(4px);opacity:.75}.demo .bl2{filter:blur(10px);opacity:.45}.demo .bl3{filter:blur(18px);opacity:.2}
 .lines{position:absolute;inset:0;background:repeating-conic-gradient(from 0deg at 50% 50%,rgba(255,210,63,.10) 0 2deg,transparent 2deg 14deg);-webkit-mask-image:radial-gradient(circle,transparent 28%,#000 70%)}
+.demo.pixel{background:#0b0913;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:24px 24px}
+.demo.pixel svg{position:absolute;inset:0;width:100%;height:100%}
+.demo .smooth{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);width:200px;height:300px}
+.demo .smooth i{position:absolute;left:50%;bottom:0;transform:translateX(-50%);border-radius:50% 50% 45% 45%/60% 60% 40% 40%;filter:blur(14px)}
+.demo.rpg{background:linear-gradient(#1b3a5c,#2f6b4f 62%,#24402c 62%)}
+.rpgbox{position:absolute;left:5%;right:5%;bottom:8%;background:#0d0b1a;border:8px solid #fff;box-shadow:0 0 0 8px #0d0b1a;padding:26px 30px;font-family:"DejaVu Sans Mono",monospace;font-weight:700;color:#fff;font-size:var(--fs,44px);line-height:1.35;text-align:left}
+.rpgbox b{color:var(--yellow)}
+.rpgbox .ar{position:absolute;right:22px;bottom:12px;color:var(--yellow);font-size:34px}
 .demo.inflate{background:radial-gradient(500px 320px at 50% 40%,#2c1f4d,#0b0913 75%)}
 .demo.inflate svg{position:absolute;inset:0;width:100%;height:100%}
 </style></head><body><div id="root"></div>
@@ -131,6 +139,14 @@ function demo(d){
     else g=flat(W*0.24,H/2,H/430*1.05)+`<text x="${W/2}" y="${H/2+20}" text-anchor="middle" font-size="90" font-weight="900" fill="#c084fc">→</text>`+puff(W*0.76,H/2-40,H/430*1.1);
     return `<div class="demo inflate" style="--h:${H}px">${lab}<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">${g}</svg></div>`;
   }
+  if(d.style==="pixel"){
+    if(d.state==="smooth") return `<div class="demo pixel" style="${st}">${lab}<div class="smooth" style="transform:translate(-50%,-50%) scale(${(d.h||430)/430})"><i style="width:190px;height:290px;background:#e8401c"></i><i style="width:140px;height:220px;background:#ff8a1c"></i><i style="width:90px;height:150px;background:#ffd23f"></i><i style="width:46px;height:80px;background:#fff3b0"></i></div></div>`;
+    const M=["....1.......","....11......","...121......","...1221..1..","..12321.11..","..123321121.",".1233432221.",".1234443321.","123445443321","123455543321","123455543321",".1234554321.",".1233443321.","..12333321..","...111111..."];
+    const C={"1":"#7a1a0a","2":"#e8401c","3":"#ff8a1c","4":"#ffd23f","5":"#fff3b0"};
+    let r="";M.forEach((row,y)=>[...row].forEach((ch,x)=>{if(C[ch])r+=`<rect x="${x}" y="${y}" width="1.02" height="1.02" fill="${C[ch]}"/>`}));
+    return `<div class="demo pixel" style="${st}">${lab}<svg viewBox="-10 -1.5 32 18" preserveAspectRatio="xMidYMid meet" shape-rendering="crispEdges">${r}</svg></div>`;}
+  if(d.style==="rpg"){
+    return `<div class="demo rpg" style="${st}">${lab}<div class="rpgbox">${esc(d.text||"").replace(/\[(.+?)\]/g,"<b>$1</b>").replace(/\n/g,"<br>")}<span class="ar">▼</span></div></div>`;}
   if(d.style==="zoom"){
     return `<div class="demo zoom" style="${st}">${lab}<div class="lines"></div><div class="w gh" style="transform:scale(1.32)">${t}</div><div class="w gh" style="transform:scale(1.16)">${t}</div><div class="w" style="transform:scale(1.04) rotate(-2deg)">${t}</div></div>`;}
   if(d.style==="speed"){
@@ -154,6 +170,7 @@ function ui(u){
   }
   if(u.ui==="demo") return demo(u);
   if(u.ui==="gradient") return win(u.title||"Dégradé",`<div class="grad" style="background:linear-gradient(90deg,${u.stops.map(x=>x.c+" "+x.p+"%").join(",")})">${u.stops.map(x=>`<span class="stop${x.hl?" hl":""}" style="left:${x.p}%"><i style="background:${x.c}"></i>${x.p}%</span>`).join("")}</div>${u.note?`<div class="row hl"><span class="k">${esc(u.note)}</span></div>`:""}`);
+  if(u.ui==="beforeafter"&&u.style==="pixel") return `<div class="ba">${demo({...u,state:"smooth",label:"AVANT",h:u.h||330})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330})}</div>`;
   if(u.ui==="beforeafter"&&u.style==="inflate") return `<div class="ba">${demo({...u,state:"flat",label:"AVANT",h:u.h||330})}${demo({...u,state:"puff",label:"APRÈS",hl:true,h:u.h||330})}</div>`;
   if(u.ui==="beforeafter"&&u.style) return `<div class="ba">${demo({...u,style:"plain",label:"AVANT",h:u.h||330,fs:u.fs||150})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330,fs:u.fs||150})}</div>`;
   if(u.ui==="beforeafter") return `<div class="ba">${demo({...u,offset:0,label:"AVANT",h:u.h||330,fs:u.fs||150})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330,fs:u.fs||150})}</div>`;
