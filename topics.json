@@ -19,18 +19,21 @@
  },
  {
   "id": "ae-zoom-impact",
-  "statut": "a_faire",
-  "sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto pas à pas)"
+  "statut": "fait",
+  "sujet": "Effet zoom punch + secousse sur le beat dans After Effects (tuto pas à pas)",
+  "pret": "ready/ae-zoom-impact.json"
  },
  {
   "id": "ae-texte-blur-reveal",
-  "statut": "a_faire",
-  "sujet": "Apparition de texte floue lettre par lettre dans After Effects (animateur de texte + flou) (tuto pas à pas)"
+  "statut": "fait",
+  "sujet": "Apparition de texte floue lettre par lettre dans After Effects (animateur de texte + flou) (tuto pas à pas)",
+  "pret": "ready/ae-texte-blur-reveal.json"
  },
  {
   "id": "pr-speed-ramp",
-  "statut": "a_faire",
-  "sujet": "Speed ramp / velocity edit dans Premiere Pro avec le remappage temporel (tuto manuel)"
+  "statut": "fait",
+  "sujet": "Speed ramp / velocity edit dans Premiere Pro avec le remappage temporel (tuto manuel)",
+  "pret": "ready/pr-speed-ramp.json"
  },
  {
   "id": "ae-glow-neon",
