@@ -94,6 +94,9 @@ h3{font-family:"Inter Display","Inter",sans-serif;font-weight:900;font-size:74px
 .stop i{width:30px;height:30px;border-radius:6px;border:3px solid #fff}
 .stop.hl i{border-color:var(--yellow);box-shadow:0 0 14px var(--yellow)}
 
+.demo.neon{background:radial-gradient(520px 320px at 50% 50%,#2a0b3d,#07050c 75%)}
+.neo{display:inline-block;font-weight:500;letter-spacing:4px;color:#fff;text-shadow:0 0 6px #fff,0 0 16px #ff3ea5,0 0 36px #ff3ea5,0 0 70px #ff3ea5,0 0 120px #ff3ea5}
+.neo .off{color:#4a2340;text-shadow:none}
 .demo.inflate{background:radial-gradient(500px 320px at 50% 40%,#2c1f4d,#0b0913 75%)}
 .demo.inflate svg{position:absolute;inset:0;width:100%;height:100%}
 </style></head><body><div id="root"></div>
@@ -119,6 +122,9 @@ function demo(d){
     else g=flat(W*0.24,H/2,H/430*1.05)+`<text x="${W/2}" y="${H/2+20}" text-anchor="middle" font-size="90" font-weight="900" fill="#c084fc">→</text>`+puff(W*0.76,H/2-40,H/430*1.1);
     return `<div class="demo inflate" style="--h:${H}px">${lab}<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">${g}</svg></div>`;
   }
+  if(d.style==="neon"){const raw=String(d.text||"NEON");const off=d.off??-1;
+    const t2=[...raw].map((ch,k)=>k===off?`<span class="off">${esc(ch)}</span>`:esc(ch)).join("");
+    return `<div class="demo neon" style="${st}">${lab}<div class="w" style="mix-blend-mode:normal"><span class="neo">${t2}</span></div></div>`;}
   if(d.style==="chrome"||d.style==="plain"){const c=d.style==="chrome";
     return `<div class="demo${c?" chrome":""}" style="${st}">${lab}${c?`<div class="sun"></div><div class="grid"></div>`:""}<div class="w" style="mix-blend-mode:normal"><span class="${c?"chr":"plain"}">${t}</span></div></div>`;}
   if(!o) return `<div class="demo" style="${st}">${lab}<div class="w">${t}</div></div>`;
