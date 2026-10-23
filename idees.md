@@ -10,6 +10,9 @@
 - Styles repérés sur MotionElements (catégories) : glitch, high-tech, luxe, pop, grunge.
 - Référence : [80s Retro Chrome 5 Titles](https://www.motionelements.com/fr/after-effects-template-21105649-80s-retro-chrome-5-titles) → fait : `ae-chrome-80s`.
 
+## Variété (règle d'Alexis)
+- Chaque tuto doit être **bien différent** des précédents : ne pas enchaîner deux tutos qui reposent sur le même effet ou le même look (ex. refusé : transition pixel juste après la flamme pixel — tous deux basés sur Mosaïque). Regarde les 6 derniers sujets `fait` avant de choisir.
+
 ## À éviter (refusé par Alexis)
 - Diaporama auto, compteur de chiffres, logo reveal avec reflet, interface HUD, texte pop qui rebondit.
 - Zoom punch + secousse sur le beat, texte qui sort du flou lettre par lettre (refusés le 22/10).

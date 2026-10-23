@@ -103,7 +103,7 @@
  },
  {
   "id": "pr-transition-pixel",
-  "statut": "fait",
+  "statut": "refuse",
   "pret": "ready/pr-transition-pixel.json",
   "sujet": "Transition pixel rétro (comme un vieux jeu) dans Premiere Pro : calque de réglage + Mosaïque animée + Postérisation temporelle (tuto pas à pas)"
  }
