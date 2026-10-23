@@ -100,5 +100,11 @@
   "statut": "fait",
   "pret": "ready/ae-dialogue-rpg.json",
   "sujet": "Boîte de dialogue de vieux RPG, texte lettre par lettre + flèche qui clignote dans After Effects (tuto pas à pas)"
+ },
+ {
+  "id": "pr-transition-pixel",
+  "statut": "fait",
+  "pret": "ready/pr-transition-pixel.json",
+  "sujet": "Transition pixel rétro (comme un vieux jeu) dans Premiere Pro : calque de réglage + Mosaïque animée + Postérisation temporelle (tuto pas à pas)"
  }
 ]

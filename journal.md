@@ -10,3 +10,4 @@
 | 2026-10-23 18:00 | ae-flamme-pixel | IG, FB, TikTok | [programmé](https://app.metricool.com/planner/calendar?blogId=7566777&openWithPostUuid=-6213838811223863779) |
 | 2026-10-24 18:00 | ae-dialogue-rpg | IG, FB, TikTok | [programmé](https://app.metricool.com/planner/calendar?blogId=7566777&openWithPostUuid=3150836245997110337) |
 | 2026-10-25 18:00 | pr-speed-ramp | IG, FB, TikTok | [programmé](https://app.metricool.com/planner/calendar?blogId=7566777&openWithPostUuid=-6999361514406983934) |
+| 2026-10-29 10:00 | pr-transition-pixel | IG, FB, TikTok | [programmé](https://app.metricool.com/planner/calendar?blogId=7566777&openWithPostUuid=4587391168578994928) |
