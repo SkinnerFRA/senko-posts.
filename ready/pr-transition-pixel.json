@@ -1,0 +1,165 @@
+{
+ "id": "pr-transition-pixel",
+ "slides": [
+  {
+   "type": "cover",
+   "tag": "PREMIERE PRO",
+   "title": "Transition\n*pixel rétro.*",
+   "size": 120,
+   "sub": "Ton plan se pixelise comme dans un vieux jeu… et le suivant apparaît.",
+   "visual": {
+    "ui": "demo",
+    "style": "mosaic",
+    "cols": 12,
+    "h": 420
+   }
+  },
+  {
+   "type": "visual",
+   "title": "Ce que tu vas _obtenir_",
+   "visual": {
+    "ui": "beforeafter",
+    "style": "mosaic",
+    "h": 330
+   },
+   "body": "Pile sur la coupe, l'image éclate en gros pixels puis se reconstruit sur le plan suivant."
+  },
+  {
+   "type": "tuto",
+   "title": "Deux plans _bout à bout_",
+   "visual": {
+    "ui": "timeline",
+    "title": "Séquence",
+    "colName": "Piste",
+    "colMode": "Durée",
+    "rows": [
+     {
+      "name": "V1  Plan A | Plan B",
+      "color": "#8b5cf6",
+      "hl": true,
+      "note": "coupe sèche"
+     }
+    ]
+   },
+   "body": "Pas de fondu : une coupe sèche entre les deux plans, la transition se fera par-dessus."
+  },
+  {
+   "type": "tuto",
+   "title": "Un calque _de réglage_",
+   "visual": {
+    "ui": "timeline",
+    "title": "Séquence",
+    "colName": "Piste",
+    "colMode": "Durée",
+    "rows": [
+     {
+      "name": "V2  Réglage",
+      "color": "#ffd23f",
+      "hl": true,
+      "mode": "20 im.",
+      "hlmode": true
+     },
+     {
+      "name": "V1  Plan A | Plan B",
+      "color": "#8b5cf6"
+     }
+    ]
+   },
+   "body": "Crée un calque de réglage dans le panneau Projet et pose-le en V2, centré sur la coupe : tout ce qu'il touche sera pixelisé."
+  },
+  {
+   "type": "tuto",
+   "title": "Ajoute _Mosaïque_",
+   "visual": {
+    "ui": "menu",
+    "title": "Effets",
+    "menus": [
+     {
+      "head": "Effets vidéo",
+      "items": [
+       "Flou et netteté",
+       "Styliser",
+       "Temps",
+       "Transformer"
+      ],
+      "sel": "Styliser"
+     },
+     {
+      "head": "Styliser",
+      "items": [
+       "Bords nets",
+       "Mosaïque",
+       "Postérisation"
+      ],
+      "sel": "Mosaïque"
+     }
+    ]
+   },
+   "body": "Glisse l'effet Mosaïque sur le calque de réglage et coche Couleurs nettes."
+  },
+  {
+   "type": "tuto",
+   "title": "Anime les _blocs_",
+   "visual": {
+    "ui": "keys",
+    "title": "Mosaïque",
+    "prop": "Blocs  200 → 8 → 200",
+    "keys": [
+     10,
+     50,
+     90
+    ],
+    "wave": false
+   },
+   "body": "Début du calque : 200 blocs (image normale). Sur la coupe : 8 blocs. Fin : 200. Fais pareil sur les blocs verticaux."
+  },
+  {
+   "type": "tuto",
+   "title": "Le côté _saccadé_",
+   "visual": {
+    "ui": "effects",
+    "title": "Effets",
+    "effect": "Postérisation temporelle",
+    "params": [
+     {
+      "k": "Cadence",
+      "v": "12 i/s",
+      "hl": true,
+      "note": "effet jeu vidéo"
+     }
+    ]
+   },
+   "body": "Ajoute-la sur le même calque : les blocs changent par à-coups, comme une vieille console."
+  },
+  {
+   "type": "tuto",
+   "title": "Le _son_ qui tue",
+   "visual": {
+    "ui": "keys",
+    "title": "Audio",
+    "prop": "Bip 8-bit sur la coupe",
+    "keys": [
+     50
+    ],
+    "beats": [
+     50
+    ]
+   },
+   "body": "Un petit bruitage rétro (bip, power-up) pile sur la coupe : c'est lui qui vend l'effet."
+  },
+  {
+   "type": "cta",
+   "title": "Enregistre\n_ce tuto._",
+   "button": "Abonne-toi",
+   "question": "Tu la mettrais entre quels plans ?",
+   "visual": {
+    "ui": "demo",
+    "style": "mosaic",
+    "cols": 14,
+    "h": 300
+   }
+  }
+ ],
+ "caption": "La transition pixel rétro dans Premiere Pro, comme dans un vieux jeu vidéo 👾🎮\n\nUn calque de réglage sur la coupe, l'effet Mosaïque animé de 200 à 8 blocs, et la Postérisation temporelle pour le côté saccadé.\n\nEnregistre ce tuto pour ton prochain montage 📌\n\n👇 Dis-moi entre quels plans tu la mettrais\n\n#premierepro #transition #pixelart #retrogaming #montagevideo #tutopremiere #8bit",
+ "tiktok_title": "Transition pixel rétro dans Premiere Pro 👾"
+}

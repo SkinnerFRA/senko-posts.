@@ -139,6 +139,11 @@ function demo(d){
     else g=flat(W*0.24,H/2,H/430*1.05)+`<text x="${W/2}" y="${H/2+20}" text-anchor="middle" font-size="90" font-weight="900" fill="#c084fc">→</text>`+puff(W*0.76,H/2-40,H/430*1.1);
     return `<div class="demo inflate" style="--h:${H}px">${lab}<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet">${g}</svg></div>`;
   }
+  if(d.style==="mosaic"){const W=d.cols||16,H=Math.round(W*0.62);let r="";
+    for(let y=0;y<H;y++)for(let x=0;x<W;x++){const cx=W/2,cy=H*0.55,ds=Math.hypot(x+.5-cx,(y+.5-cy)*1.1);
+      let c; if(y>=H*0.62) c=((x+y)%2?"#3a0d5e":"#2a0b4a"); else if(ds<H*0.28) c=ds<H*0.17?"#fff3b0":"#ffd23f"; else {const t=y/(H*0.62);c=`rgb(${Math.round(18+t*237)},${Math.round(6+t*56)},${Math.round(46+t*119)})`;}
+      r+=`<rect x="${x}" y="${y}" width="1.02" height="1.02" fill="${c}"/>`;}
+    return `<div class="demo" style="${st};background:#0b0913">${lab}<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" shape-rendering="crispEdges" style="position:absolute;inset:0;width:100%;height:100%">${r}</svg></div>`;}
   if(d.style==="pixel"){
     if(d.state==="smooth") return `<div class="demo pixel" style="${st}">${lab}<div class="smooth" style="transform:translate(-50%,-50%) scale(${(d.h||430)/430})"><i style="width:190px;height:290px;background:#e8401c"></i><i style="width:140px;height:220px;background:#ff8a1c"></i><i style="width:90px;height:150px;background:#ffd23f"></i><i style="width:46px;height:80px;background:#fff3b0"></i></div></div>`;
     const M=["....1.......","....11......","...121......","...1221..1..","..12321.11..","..123321121.",".1233432221.",".1234443321.","123445443321","123455543321","123455543321",".1234554321.",".1233443321.","..12333321..","...111111..."];
@@ -170,6 +175,7 @@ function ui(u){
   }
   if(u.ui==="demo") return demo(u);
   if(u.ui==="gradient") return win(u.title||"Dégradé",`<div class="grad" style="background:linear-gradient(90deg,${u.stops.map(x=>x.c+" "+x.p+"%").join(",")})">${u.stops.map(x=>`<span class="stop${x.hl?" hl":""}" style="left:${x.p}%"><i style="background:${x.c}"></i>${x.p}%</span>`).join("")}</div>${u.note?`<div class="row hl"><span class="k">${esc(u.note)}</span></div>`:""}`);
+  if(u.ui==="beforeafter"&&u.style==="mosaic") return `<div class="ba">${demo({...u,cols:64,label:"AVANT",h:u.h||330})}${demo({...u,cols:12,label:"APRÈS",hl:true,h:u.h||330})}</div>`;
   if(u.ui==="beforeafter"&&u.style==="pixel") return `<div class="ba">${demo({...u,state:"smooth",label:"AVANT",h:u.h||330})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330})}</div>`;
   if(u.ui==="beforeafter"&&u.style==="inflate") return `<div class="ba">${demo({...u,state:"flat",label:"AVANT",h:u.h||330})}${demo({...u,state:"puff",label:"APRÈS",hl:true,h:u.h||330})}</div>`;
   if(u.ui==="beforeafter"&&u.style) return `<div class="ba">${demo({...u,style:"plain",label:"AVANT",h:u.h||330,fs:u.fs||150})}${demo({...u,label:"APRÈS",hl:true,h:u.h||330,fs:u.fs||150})}</div>`;
