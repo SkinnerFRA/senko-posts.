@@ -11,3 +11,4 @@
 | 2026-11-03 10:00 | ae-dialogue-rpg | IG, FB, TikTok | [programmé](https://app.metricool.com/planner/calendar?blogId=7566777&openWithPostUuid=3150836245997110337) |
 | 2026-11-05 10:00 | pr-speed-ramp | IG, FB, TikTok | [programmé](https://app.metricool.com/planner/calendar?blogId=7566777&openWithPostUuid=-6999361514406983934) |
 | (annulé, brouillon) | pr-transition-pixel | IG, FB, TikTok | [brouillon](https://app.metricool.com/planner/calendar?blogId=7566777&openWithPostUuid=4587391168578994928) |
+| 2026-10-29 10:00 | sites-sons | IG, FB, TikTok | [programmé](https://app.metricool.com/planner/calendar?blogId=7566777&openWithPostUuid=-7565050049782659000) |

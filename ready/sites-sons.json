@@ -1,0 +1,11 @@
+{"id":"sites-sons","slides":[
+ {"type":"cover","tag":"SONS & BRUITAGES","title":"5 sites\nde sons\n*gratuits.*","sub":"Whoosh, impacts, ambiances : tout ce qu'il faut pour tes edits.","visual":{"ui":"demo","text":"WHOOSH","style":"speed","h":300,"fs":150}},
+ {"type":"point","num":"01","title":"_Freesound_","body":"Une énorme banque de sons partagés par la communauté. Chaque son a sa propre licence : regarde-la avant de l'utiliser.","chip":"freesound.org"},
+ {"type":"point","num":"02","title":"_Pixabay_ Sound","body":"Des bruitages et des musiques gratuits, rangés par catégorie. Simple et rapide pour trouver un whoosh.","chip":"pixabay.com"},
+ {"type":"point","num":"03","title":"_Mixkit_","body":"Une sélection courte mais propre : transitions, clics, ambiances. Idéal quand tu veux aller vite.","chip":"mixkit.co"},
+ {"type":"point","num":"04","title":"_Zapsplat_","body":"Des milliers de bruitages classés au millimètre. Compte gratuit, mais lis bien les conditions de crédit.","chip":"zapsplat.com"},
+ {"type":"point","num":"05","title":"Bundle _Sonniss GDC_","body":"Chaque année, des gigas de sons pro offerts pour la GDC. Télécharge-les une fois, garde-les à vie.","chip":"sonniss.com"},
+ {"type":"list","title":"Avant de *télécharger*","items":[{"t":"Vérifie la licence","s":"chaque site a ses règles"},{"t":"Usage commercial ?","s":"pas toujours autorisé"},{"t":"Crédit obligatoire ?","s":"note l'auteur au cas où"},{"t":"Range tes sons","s":"un dossier par type"}]},
+ {"type":"cta","title":"Enregistre\n_ce post._","button":"Abonne-toi","question":"C'est quoi ton bruitage préféré dans un edit ?"}],
+ "caption":"5 sites gratuits pour trouver des sons et bruitages pour tes montages 🔊\n\nFreesound, Pixabay Sound, Mixkit, Zapsplat et le bundle Sonniss GDC. Pense à toujours vérifier la licence de chaque son avant de l'utiliser.\n\nEnregistre ce post pour ton prochain montage 📌\n\n👇 Dis-moi en commentaire ton bruitage préféré\n\n#sounddesign #bruitage #montagevideo #premierepro #aftereffects #sfx #ressourcesgratuites",
+ "tiktok_title":"5 sites de sons gratuits pour tes edits 🔊"}

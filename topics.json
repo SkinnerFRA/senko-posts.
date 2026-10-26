@@ -41,8 +41,9 @@
  },
  {
   "id": "sites-sons",
-  "statut": "a_faire",
-  "sujet": "5 sites gratuits pour trouver des sons et bruitages (Freesound, Pixabay Sound, Mixkit, Zapsplat, bundle Sonniss GDC) — préciser de vérifier la licence"
+  "statut": "fait",
+  "sujet": "5 sites gratuits pour trouver des sons et bruitages (Freesound, Pixabay Sound, Mixkit, Zapsplat, bundle Sonniss GDC) — préciser de vérifier la licence",
+  "pret": "ready/sites-sons.json"
  },
  {
   "id": "ae-expressions",
